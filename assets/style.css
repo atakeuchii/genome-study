@@ -1,0 +1,57 @@
+:root {
+  --accent: #2c6e8f;
+  --accent-dark: #1f4d5e;
+  --gold: #caa23a;
+  --brake-bg: #fdecea;
+  --brake-fg: #a5281b;
+  --hall-bg: #e9f6ee;
+  --hall-fg: #1f5d39;
+  --gas-bg: #eef2fb;
+  --gas-fg: #2f3f8f;
+  --ink: #2a2a2a;
+  --muted: #777;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.85;
+  color: var(--ink);
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+  background: #fff;
+}
+header.site {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 16px;
+  margin-bottom: 28px;
+}
+header.site a.home { text-decoration: none; color: var(--accent); font-weight: 700; }
+h1 { font-size: 26px; border-bottom: 3px solid var(--gold); padding-bottom: 10px; }
+h2 {
+  font-size: 19px; margin-top: 38px; color: var(--accent-dark);
+  border-left: 5px solid var(--accent); padding-left: 12px;
+}
+.pos { background: #f4f8fa; border: 1px solid #cfe0e8; border-radius: 8px; padding: 14px 18px; margin: 18px 0; font-size: 14.5px; }
+.note { background: #fcf8ec; border: 1px solid #e6d49a; border-radius: 8px; padding: 14px 18px; margin: 20px 0; font-size: 14px; }
+.fig { text-align: center; margin: 26px 0; }
+.fig svg { max-width: 100%; height: auto; }
+.caption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+a { color: var(--accent); }
+strong { color: var(--accent-dark); }
+.tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 10px; margin-right: 6px; }
+.brake { background: var(--brake-bg); color: var(--brake-fg); }
+.gas { background: var(--gas-bg); color: var(--gas-fg); }
+.hall { background: var(--hall-bg); color: var(--hall-fg); }
+ul { padding-left: 22px; }
+
+/* index page */
+.phase { margin-top: 32px; }
+.phase h2 { margin-top: 16px; }
+table.toc { border-collapse: collapse; width: 100%; font-size: 14px; margin-top: 12px; }
+table.toc th, table.toc td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+table.toc th { background: #f4f8fa; color: var(--accent-dark); }
+table.toc td.day { white-space: nowrap; font-weight: 700; color: var(--accent); }
+.done { color: #2e7d4f; font-weight: 700; }
+.todo { color: #bbb; }
+footer.site { margin-top: 48px; border-top: 1px solid #eee; padding-top: 16px; font-size: 13px; color: var(--muted); }

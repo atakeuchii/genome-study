@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 13：TP53 | がんゲノム学習ノート</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site"><a class="home" href="../index.html">← 目次にもどる</a></header>
+
+<h1>Day 13：TP53 — がんゲノムの主役</h1>
+<p>
+  <span class="tag brake">系統：ブレーキ系（がん抑制遺伝子）</span>
+  <span class="tag hall">主に効く Hallmark：増殖抑制の回避／ゲノム不安定性</span>
+</p>
+
+<div class="pos">
+<strong>全体マップの中での位置づけ</strong><br>
+フェーズ2の1日目。ここから「頻出ドライバー遺伝子を1日1個」のパートに入る。トップバッターがTP53なのは、ヒトのがんの半分以上で変異が見つかる最頻出のがん関連遺伝子だから。レポートを読めばまず何度も出会う。Day 3 で立てた軸（アクセル系＝がん遺伝子／ブレーキ系＝がん抑制遺伝子）と、Day 5「増殖抑制の回避」・Day 8「ゲノム不安定性」という Hallmark の交差点に立つ遺伝子。
+</div>
+
+<h2>① 正常時の役割 ── 「ゲノムの守護者」</h2>
+<p>
+TP53は典型的な<strong>がん抑制遺伝子（ブレーキ系）</strong>で、p53というタンパク質を作る。正常な細胞では普段おとなしいが、<strong>DNAが傷ついたり、異常な増殖シグナルが来たりするとスイッチが入り</strong>、転写因子として多数の遺伝子をオンにする。やることは大きく3つ：
+</p>
+<ul>
+  <li>細胞周期を一時停止させて修理の時間を稼ぐ（Day 1 の細胞周期チェックポイントに直結）</li>
+  <li>修理しきれなければアポトーシス＝細胞の自殺を発動する（Day 1 のアポトーシスに直結）</li>
+  <li>老化を誘導して二度と増えない状態にする</li>
+</ul>
+<p>
+つまりp53は「傷ついた細胞ががん化しないよう、止める・直す・殺すを判断する非常ブレーキ」。"ゲノムの守護者（guardian of the genome）"と呼ばれるのはこのため。
+</p>
+
+<h2>② がんでの壊れ方 ── 機能喪失、ただし一筋縄ではない</h2>
+<p>
+変異タイプは主に<strong>機能喪失型（loss of function）</strong>。ブレーキが効かず、傷ついた細胞が止められず・殺されずに増え続ける（Day 5「増殖抑制の回避」）。p53が消えてゲノムの傷が蓄積する点は Day 8「ゲノム不安定性」に直結する。
+</p>
+<p>ただしTP53が厄介なのは、単純なブレーキ消失で終わらない点。押さえるべきは3つ：</p>
+<ul>
+  <li>変異の多くは<strong>ミスセンス変異</strong>（1アミノ酸が置換）で、特定の「ホットスポット」に集中する。タンパク質が丸ごと消えるより、<strong>形の変わったp53が居座る</strong>ことが多い。</li>
+  <li>居座ったp53が無力なだけでなく、<strong>新たな悪い性質を獲得する</strong>ことがある（gain-of-function）。</li>
+  <li>変異型p53が残った正常コピーの働きを邪魔する<strong>優性阻害（dominant-negative）</strong>があり、Day 3 で学ぶ「抑制遺伝子は通常 two-hit」原則のやや例外的な振る舞いを見せる。</li>
+</ul>
+
+<h2>③ 乗っている経路 ── p53ネットワーク</h2>
+<p>
+TP53は長い直列の経路ではなく、<strong>ストレス→p53→下流の応答</strong>というハブを成す。重要な制御点が <strong>MDM2</strong>：正常時はMDM2がp53を分解方向に抑え込み、量を低く保つ。ストレス時にこの抑制が外れてp53が立ち上がる。このMDM2との綱引きが、後述の創薬の鍵になる。
+</p>
+<p>
+フェーズ1（特に Day 1 のシグナル伝達の基本形）が入っていれば、この経路は図がなくても文章で追える。p53は経路が短いハブ型なので、覚えるべき関係は下の1枚にほぼ集約される。
+</p>
+
+<div class="fig">
+<svg viewBox="0 0 720 520" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#444"/>
+    </marker>
+    <marker id="inhibit" markerWidth="12" markerHeight="12" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 M2,0 L2,6" stroke="#c0392b" stroke-width="1.6"/>
+    </marker>
+  </defs>
+  <text x="360" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#222">p53ネットワークの概念図</text>
+  <text x="360" y="56" text-anchor="middle" font-size="12.5" fill="#777">入力（ストレス）→ p53ハブ → 出力（3つの応答）</text>
+  <text x="120" y="92" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2c6e8f">① 入力：ストレス</text>
+  <rect x="30" y="106" width="180" height="40" rx="8" fill="#eaf4f9" stroke="#2c6e8f" stroke-width="1.3"/>
+  <text x="120" y="124" text-anchor="middle" font-size="12.5" fill="#1d4e64">DNA損傷</text>
+  <text x="120" y="140" text-anchor="middle" font-size="11" fill="#557">（放射線・複製エラーなど）</text>
+  <rect x="30" y="158" width="180" height="40" rx="8" fill="#eaf4f9" stroke="#2c6e8f" stroke-width="1.3"/>
+  <text x="120" y="176" text-anchor="middle" font-size="12.5" fill="#1d4e64">異常な増殖シグナル</text>
+  <text x="120" y="192" text-anchor="middle" font-size="11" fill="#557">（がん遺伝子の暴走など）</text>
+  <rect x="270" y="120" width="120" height="44" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="330" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#a5281b">MDM2</text>
+  <text x="330" y="158" text-anchor="middle" font-size="10.5" fill="#a5281b">p53を分解・抑制</text>
+  <rect x="285" y="220" width="150" height="70" rx="12" fill="#fff4d6" stroke="#caa23a" stroke-width="2.2"/>
+  <text x="360" y="250" text-anchor="middle" font-size="17" font-weight="700" fill="#7a5c10">p53</text>
+  <text x="360" y="270" text-anchor="middle" font-size="11" fill="#7a5c10">転写因子（ハブ）</text>
+  <text x="360" y="283" text-anchor="middle" font-size="10" fill="#9a7d2e">＝ゲノムの守護者</text>
+  <path d="M210,128 C245,150 255,200 300,222" fill="none" stroke="#2c6e8f" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M210,178 C245,200 260,205 298,232" fill="none" stroke="#2c6e8f" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M330,164 L350,216" fill="none" stroke="#c0392b" stroke-width="1.8" marker-end="url(#inhibit)"/>
+  <text x="398" y="195" font-size="10.5" fill="#c0392b">ふだんは抑制</text>
+  <text x="398" y="209" font-size="10" fill="#c0392b">（ストレス時に外れる）</text>
+  <text x="360" y="330" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2e7d4f">③ 出力：3つの応答</text>
+  <rect x="55" y="350" width="180" height="64" rx="8" fill="#e9f6ee" stroke="#2e7d4f" stroke-width="1.3"/>
+  <text x="145" y="374" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f5d39">細胞周期の停止</text>
+  <text x="145" y="392" text-anchor="middle" font-size="10.5" fill="#3a6b4d">いったん止めて</text>
+  <text x="145" y="406" text-anchor="middle" font-size="10.5" fill="#3a6b4d">修理の時間を稼ぐ</text>
+  <rect x="270" y="350" width="180" height="64" rx="8" fill="#e9f6ee" stroke="#2e7d4f" stroke-width="1.3"/>
+  <text x="360" y="374" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f5d39">アポトーシス</text>
+  <text x="360" y="392" text-anchor="middle" font-size="10.5" fill="#3a6b4d">直せなければ</text>
+  <text x="360" y="406" text-anchor="middle" font-size="10.5" fill="#3a6b4d">細胞を自殺させる</text>
+  <rect x="485" y="350" width="180" height="64" rx="8" fill="#e9f6ee" stroke="#2e7d4f" stroke-width="1.3"/>
+  <text x="575" y="374" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f5d39">細胞老化</text>
+  <text x="575" y="392" text-anchor="middle" font-size="10.5" fill="#3a6b4d">二度と増えない</text>
+  <text x="575" y="406" text-anchor="middle" font-size="10.5" fill="#3a6b4d">状態にする</text>
+  <path d="M320,285 C260,315 180,330 150,348" fill="none" stroke="#2e7d4f" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M360,292 L360,348" fill="none" stroke="#2e7d4f" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M400,285 C460,315 545,330 572,348" fill="none" stroke="#2e7d4f" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <rect x="120" y="446" width="480" height="56" rx="8" fill="#f7f7f7" stroke="#bbb" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="360" y="468" text-anchor="middle" font-size="12" font-weight="700" fill="#a5281b">がんでは：TP53が機能喪失</text>
+  <text x="360" y="486" text-anchor="middle" font-size="11" fill="#555">→ ハブが働かず、3つの出力すべてが止まる＝傷ついた細胞が止められず増え続ける</text>
+</svg>
+<div class="caption">独自作図。赤い二重線はMDM2による抑制（ブレーキ）を表す。</div>
+</div>
+
+<p>さらに詳しい外部図版（転載できないためリンク参照）：</p>
+<ul>
+  <li>Cell Signaling Technology「p53 Signaling」：<a href="https://www.cellsignal.jp/pathways/p53-signaling-pathway">https://www.cellsignal.jp/pathways/p53-signaling-pathway</a></li>
+  <li>KEGG PATHWAY「p53 signaling pathway」：<a href="https://www.kegg.jp/pathway/hsa04115">https://www.kegg.jp/pathway/hsa04115</a></li>
+</ul>
+
+<h2>④ 対応する薬・エビデンス ── 「最頻出なのに狙いにくい」代表例</h2>
+<p>
+TP53の最重要な実務ポイント。こんなに高頻度なのに、長らく有効な分子標的薬がない<strong>「難攻不落（undruggable）」の代表格</strong>だった。理由はシンプルで、「失われた機能（ブレーキ）」を薬で足すのは、「効きすぎている機能（アクセル）」を薬で止めるよりずっと難しいから。EGFRやBRAFのようなアクセル系は阻害薬で止めればよいが、p53は壊れた金庫の鍵をかけ直すような難しさがある。
+</p>
+<p>近年の創薬アプローチは大きく3系統に整理される：</p>
+<ul>
+  <li>正常型p53の遺伝子を導入する</li>
+  <li>正常型p53とその抑制因子MDM2との結合を妨げ、内在性p53を活性化する</li>
+  <li>変異p53タンパクの形を「補正」して機能を回復させる</li>
+</ul>
+<p>
+特に注目は3つ目の「形を直す」アプローチ。<strong>Y220C</strong> という変異はタンパク質に小さな隙間を作るため、そこに小分子を結合させて正常な形に戻せる。代表が <strong>rezatapopt</strong> で、2026年時点では臨床試験段階。2026年のSGO年次総会で、TP53 Y220C変異を持つ進行卵巣がん患者に腫瘍縮小と持続的な奏効が示されたと報告された。ただし耐性の獲得も報告されており、まだ発展途上。
+</p>
+
+<div class="note">
+<strong>レポート読解での実務的な意味づけ</strong><br>
+TP53変異を見つけても、大半のケースでは「直接効く承認薬がある」のではなく、予後因子や他の所見と合わせた解釈材料として扱われることが多い。一方で「Y220Cか？」のような特定の変異は臨床試験の対象になりうるので、エキスパートパネルでは治験マッチングの観点から注目される。<strong>同じTP53変異でも、変異の種類によって意味づけ（actionability）が変わる</strong>——Day 12 のエビデンスレベルの考え方と合わせると、これが実感できる。
+</div>
+
+<h2>この型について</h2>
+<p>
+フェーズ2の各遺伝子は、<strong>①正常時の役割 → ②がんでの壊れ方 → ③乗っている経路 → ④薬・エビデンス</strong> の4段構成。毎回 Day 3 の「アクセル/ブレーキ」と、どの Hallmark につながるかを明示する。次の Day 14（RB1）も同じブレーキ系で対になる存在、Day 16 のKRAS以降でアクセル系に移り、経路図が本領を発揮する。
+</p>
+
+<footer class="site">がんゲノム学習ノート — Day 13 / TP53</footer>
+</body>
+</html>
