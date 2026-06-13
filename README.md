@@ -19,11 +19,10 @@
 
 ## 日々の流れ
 
-1. このチャットで「day N の学習内容を表示して」と送る。
-2. 生成された `day-N-xxx.html` を `days/` に置く。
-3. `make build`（= `python3 build.py`）で目次を更新。
-4. `make commit` で add → commit → push。
-5. GitHub Actions が走り、数分後に Pages に反映。
+1. 生成された `day-N-xxx.html` を `days/` に置く。
+2. `make build`（= `python3 build.py`）で目次を更新。
+3. `make commit` で add → commit → push。
+4. GitHub Actions が走り、数分後に Pages に反映。
 
 ## ローカル確認
 
