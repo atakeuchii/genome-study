@@ -45,6 +45,26 @@ strong { color: var(--accent-dark); }
 .hall { background: var(--hall-bg); color: var(--hall-fg); }
 ul { padding-left: 22px; }
 
+/* day eyebrow (small date label, sits on the gold rule) */
+.eyebrow {
+  font-size: 12px; letter-spacing: 0.18em; font-weight: 700;
+  color: #b7c2c8; text-transform: uppercase; margin: 0;
+}
+
+/* sticky day heading block: title + day-label unified on the gold rule */
+body.daypage { padding-top: 0; }
+.topbar { position: sticky; top: 0; z-index: 20; background: #fff; padding-top: 16px; }
+.topbar header.site { margin-bottom: 0; padding-bottom: 8px; border-bottom: none; }
+.dayhead {
+  background: #fff;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 16px;
+  border-bottom: 3px solid var(--gold);
+  padding: 4px 0 10px; margin: 0;
+}
+.dayhead h1 { border: none; margin: 0; padding: 0; font-size: 23px; line-height: 1.35; }
+.dayhead .eyebrow { margin: 0 0 4px; white-space: nowrap; flex: 0 0 auto; }
+.topbar + p.tags { margin-top: 14px; }
+
 /* index page */
 .phase { margin-top: 32px; }
 .phase h2 { margin-top: 16px; }
@@ -55,3 +75,24 @@ table.toc td.day { white-space: nowrap; font-weight: 700; color: var(--accent); 
 .done { color: #2e7d4f; font-weight: 700; }
 .todo { color: #bbb; }
 footer.site { margin-top: 48px; border-top: 1px solid #eee; padding-top: 16px; font-size: 13px; color: var(--muted); }
+
+/* day navigation (Back / Next) */
+nav.daynav {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  margin: 48px 0 8px; border-top: 1px solid #eee; padding-top: 18px;
+}
+nav.daynav a {
+  text-decoration: none; color: var(--accent); font-size: 14px;
+  display: inline-flex; flex-direction: column; gap: 2px; max-width: 46%;
+}
+nav.daynav a .dir { font-weight: 700; }
+nav.daynav a .sub {
+  font-size: 12px; color: var(--muted); font-weight: 400;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+nav.daynav a.next { text-align: right; align-items: flex-end; }
+nav.daynav span.disabled {
+  color: #ccc; font-size: 14px; display: inline-flex;
+  flex-direction: column; gap: 2px; align-items: flex-end; max-width: 46%;
+}
+nav.daynav span.disabled .sub { font-size: 12px; }

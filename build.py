@@ -70,7 +70,10 @@ def extract_title(path):
     text = path.read_text(encoding="utf-8")
     m = re.search(r"<h1>(.*?)</h1>", text, re.S)
     if m:
-        return re.sub(r"\s+", " ", m.group(1)).strip()
+        title = re.sub(r"\s+", " ", m.group(1)).strip()
+        # 「内容」列では Day番号が別列にあるので、先頭の「Day N：」を取り除く
+        title = re.sub(r"^Day\s*\d+\s*[:：]\s*", "", title)
+        return title
     return path.stem
 
 
@@ -87,7 +90,7 @@ def build():
             link = f'<a href="{href}">{title}</a>'
             status = '<span class="done">✓ 作成済み</span>'
         else:
-            link = f"Day {day}：{topic}"
+            link = f"{topic}"
             status = '<span class="todo">未作成</span>'
         rows_by_phase[phase].append((day, link, status))
 
