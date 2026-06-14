@@ -121,20 +121,12 @@ def build():
 <body>
 <header class="site"><span class="home">がんゲノム学習ノート</span></header>
 <h1>がんゲノム学習ノート</h1>
-<p>エキスパートパネルのレポートを自力で読み解くための、約1ヶ月のインプット学習ノート。
-進捗：<strong>{done} / {total} 日</strong> 作成済み。</p>
-<p style="font-size:14px;color:#777">
-設計：Hallmarks of Cancer を骨格に、パスウェイ→遺伝子→変異→薬をぶら下げて整理。
-各遺伝子は「①正常時の役割 → ②壊れ方 → ③経路 → ④薬・エビデンス」の4段構成。
-</p>
 {chr(10).join(sections)}
-<footer class="site">build.py により自動生成。新しい day-N-*.html を days/ に置いて再実行すると、この目次が更新されます。</footer>
 </body>
 </html>
 """
     INDEX.write_text(html, encoding="utf-8")
     print(f"index.html を生成しました（{done}/{total} 日 作成済み）。")
-
 
 if __name__ == "__main__":
     build()
