@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 3：がん遺伝子 vs がん抑制遺伝子（アクセル/ブレーキ） | がんゲノム学習ノート</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="daypage">
+<div class="topbar">
+<header class="site"><a class="home" href="../index.html">← 目次にもどる</a></header>
+<div class="dayhead">
+<h1>がん遺伝子 vs がん抑制遺伝子（アクセル/ブレーキ）</h1>
+<p class="eyebrow">Day 3</p>
+</div>
+</div>
+<p class="tags"><span class="tag gas">アクセル系</span> <span class="tag brake">ブレーキ系</span> <span class="tag hall">フェーズ2の全遺伝子を分類する軸</span></p>
+<div class="pos">
+<strong>全体マップの中での位置づけ</strong><br>
+Day 1（出力＝細胞周期・アポトーシス）と Day 2（入力＝シグナル伝達）で体感した「アクセル／ブレーキ」を、ここで正式な用語と分類軸として固める。フェーズ2で出てくる遺伝子は、まずこの2分類のどちらかに振り分けてから中身を見る。<strong>常に問う1問目「アクセル系かブレーキ系か？」の基準を作る回</strong>。
+</div>
+
+<h2>① 2つのタイプ ── アクセルを踏む遺伝子と、ブレーキをかける遺伝子</h2>
+<p>がんに関わる遺伝子は、大きく2タイプに分けると整理しやすい。</p>
+<ul>
+  <li><strong>がん遺伝子（oncogene／アクセル系）</strong>：正常では「増えろ」の指示を適切に伝える部品。これが<strong>活性化型変異</strong>で「踏みっぱなし」になると、指示なしで増殖が進む。Day 2 の配線図で「ON固定」になった部品がこれ。</li>
+  <li><strong>がん抑制遺伝子（tumor suppressor／ブレーキ系）</strong>：正常では「止めろ・直せ・死ね」を担う番人。これが<strong>機能喪失型変異</strong>で「効かなく」なると、暴走を止められない。Day 1 の関所の番人（Rb・p53）がこれ。</li>
+</ul>
+
+<h2>② 変異の入り方が逆 ── 「片方でいい」か「両方やられる必要がある」か</h2>
+<p>2タイプは、壊れ方の論理も対照的。ここがレポート読解で効く。</p>
+<ul>
+  <li><strong>アクセル系は「1か所」で十分</strong>：2本ある遺伝子コピーの片方が活性化変異を起こすだけで、踏みっぱなしになる（顕性／優性的に働く）。少しの変異で効く＝検出されたら意味が大きいことが多い。</li>
+  <li><strong>ブレーキ系は原則「両方」やられて初めて効く</strong>：片方が壊れてももう片方が効いていればブレーキは残る。両コピーが失われて初めて機能喪失＝<strong>ツーヒット（two-hit）仮説</strong>。遺伝性のがんでは「生まれつき片方が壊れている」ぶん、もう1ヒットで発症しやすい。</li>
+</ul>
+<p><strong>例外として覚えておく</strong>：p53（Day 13）は、変異型が残った正常コピーの足を引っ張る<strong>優性阻害（dominant-negative）</strong>があり、1ヒット的に効くことがある。原則と例外をセットにしておくと、TP53の振る舞いが腑に落ちる。</p>
+
+<div class="fig">
+<svg viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <text x="310" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#222">アクセル系とブレーキ系の対比</text>
+  <rect x="20" y="50" width="280" height="220" rx="12" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="160" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#2f3f8f">がん遺伝子（アクセル）</text>
+  <text x="160" y="104" text-anchor="middle" font-size="12" fill="#333">活性化型変異で「ON固定」</text>
+  <text x="160" y="128" text-anchor="middle" font-size="12" fill="#333">片方の変異で効く（1ヒット）</text>
+  <text x="160" y="152" text-anchor="middle" font-size="12" fill="#333">＝踏みっぱなし</text>
+  <text x="160" y="186" text-anchor="middle" font-size="11.5" fill="#666">薬：固定スイッチをOFFにする</text>
+  <text x="160" y="206" text-anchor="middle" font-size="11.5" fill="#1f5d39">＝狙いやすい（阻害薬）</text>
+  <text x="160" y="240" text-anchor="middle" font-size="11" fill="#888">例：KRAS / BRAF / EGFR / HER2</text>
+  <rect x="320" y="50" width="280" height="220" rx="12" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="460" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#a5281b">がん抑制遺伝子（ブレーキ）</text>
+  <text x="460" y="104" text-anchor="middle" font-size="12" fill="#333">機能喪失型変異で「効かない」</text>
+  <text x="460" y="128" text-anchor="middle" font-size="12" fill="#333">原則 両方やられて効く（2ヒット）</text>
+  <text x="460" y="152" text-anchor="middle" font-size="12" fill="#333">＝番人の不在</text>
+  <text x="460" y="186" text-anchor="middle" font-size="11.5" fill="#666">薬：失われた機能を戻す必要</text>
+  <text x="460" y="206" text-anchor="middle" font-size="11.5" fill="#a5281b">＝狙いにくい</text>
+  <text x="460" y="240" text-anchor="middle" font-size="11" fill="#888">例：TP53 / RB1 / PTEN / BRCA</text>
+</svg>
+<div class="caption">独自作図。レポートで遺伝子を見たら、まずこの左右どちらかに振り分けるのが第一歩。</div>
+</div>
+
+<h2>③ もうひとつの分け方 ── 門番（gatekeeper）と管理人（caretaker）</h2>
+<p>ブレーキ系はさらに2役に分けると見通しがよい。<strong>門番（gatekeeper）</strong>＝増殖そのものを直接止める番人（Rb・p53・PTEN）。<strong>管理人（caretaker）</strong>＝DNAの傷を修理してゲノムを守る係（BRCA・ミスマッチ修復系）。管理人が壊れると、傷が溜まって他の遺伝子の変異が雪だるま式に増える（Day 8「ゲノム不安定性」）。フェーズ2後半のDNA修復系（Day 21–23）はこの管理人グループ。</p>
+
+<div class="note">
+<strong>この日の要点（後ろへのつながり）</strong><br>
+・<strong>アクセル系＝活性化型・1ヒット・狙いやすい（引き算）／ブレーキ系＝機能喪失・原則2ヒット・狙いにくい（足し算）</strong>。<br>
+・例外：p53 の優性阻害（Day 13 で再登場）。<br>
+・ブレーキ系は<strong>門番</strong>（増殖を止める）と<strong>管理人</strong>（DNAを守る）に分けられる。後者はDay 8・21–23へ。<br>
+・次の Day 4 から、これらを束ねる骨格 <strong>Hallmarks of Cancer</strong> に入る。
+</div>
+<nav class="daynav"><a class="back" href="day-2-signal-transduction.html"><span class="dir">← 前へ</span><span class="sub">Day 2・がん細胞生物学の最小単位②（シグナル伝達の基本形）</span></a><a class="next" href="day-4-hallmarks-overview.html"><span class="dir">次へ →</span><span class="sub">Day 4・Hallmarks of Cancer 総論</span></a></nav>
+<footer class="site">がんゲノム学習ノート — Day 3</footer>
+</body>
+</html>
