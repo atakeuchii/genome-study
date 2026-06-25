@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KRAS / NRAS — 二大幹線の分岐点 | がんゲノム学習ノート</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="daypage">
+<div class="topbar">
+<header class="site"><a class="home" href="../index.html">← 目次にもどる</a></header>
+<div class="dayhead">
+<h1>KRAS / NRAS — 二大幹線の分岐点</h1>
+<p class="eyebrow">Day 20</p>
+</div>
+</div>
+<p class="tags"><span class="tag gas">系統：アクセル系（がん遺伝子）</span> <span class="tag hall">主に効く Hallmark：増殖シグナルの維持</span></p>
+<div class="pos">
+<strong>全体マップの中での位置づけ</strong><br>
+フェーズ2でアクセル系に本格的に入る回であり、<strong>経路図がいちばん効く遺伝子</strong>。Day 5 の図で「RTK の下、RAF の上」にいた RAS そのもの。MAPK と PI3K の<strong>両方を踏む分岐点</strong>にいるため、ここが壊れると影響が広い。最頻出のがん遺伝子で、長く「狙えない（undruggable）」の代表だったが、近年ようやく一部に薬が出た。
+</div>
+
+<h2>① 正常時の役割 ── 信号のオン/オフを切り替えるスイッチ</h2>
+<p>
+RAS は、受容体（RTK）から来た増殖の信号を下流（RAF や PI3K）へ中継する<strong>分子スイッチ</strong>。GTP が結合するとオン、GDP に変わるとオフ、と切り替わる。正常では「指示が来たとき一時的にオン → すぐオフ」と可逆的に働く（Day 2 のリン酸化スイッチの RAS 版）。
+</p>
+
+<h2>② がんでの壊れ方 ── 活性化型変異でオフに戻れない</h2>
+<p>
+変異タイプは<strong>活性化型（機能獲得）</strong>。codon 12（G12C, G12D, G12V など）や 13・61 のホットスポット変異で、<strong>RAS がオフに戻れず、オンのまま固定</strong>される。指示が無くても下流を押し続ける（Day 2 の「ON固定」の典型）。KRAS は膵がん・大腸がん・肺腺がんで、NRAS はメラノーマなどで高頻度。
+</p>
+
+<h2>③ 乗っている経路 ── MAPK と PI3K の両方を踏む</h2>
+<p>
+ここが KRAS の要。Day 5 の図のとおり、RAS は <strong>RAF→MEK→ERK（MAPK）</strong> と <strong>PI3K→AKT→mTOR</strong> の<strong>両方の幹線</strong>に信号を流す分岐点。だから KRAS の ON 固定は、2本のアクセルを同時に踏み込むことになり、下流が広く活性化する。
+</p>
+
+<div class="fig">
+<svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs><marker id="ar16" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,3 L0,6 Z" fill="#444"/></marker></defs>
+  <text x="320" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#222">KRASは分岐点：両方の幹線を踏む</text>
+  <rect x="250" y="44" width="140" height="38" rx="6" fill="#fff4d6" stroke="#caa23a" stroke-width="1.6"/>
+  <text x="320" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#7a5c10">受容体 RTK</text>
+  <text x="320" y="76" text-anchor="middle" font-size="9.5" fill="#9a7d2e">EGFR など</text>
+  <path d="M320,82 L320,104" stroke="#444" stroke-width="1.5" marker-end="url(#ar16)"/>
+  <rect x="250" y="106" width="140" height="44" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="2"/>
+  <text x="320" y="128" text-anchor="middle" font-size="13" font-weight="700" fill="#2f3f8f">RAS（KRAS）</text>
+  <text x="320" y="143" text-anchor="middle" font-size="9.5" fill="#a5281b">G12C/G12D… でON固定</text>
+  <path d="M320,150 C260,165 220,170 200,182" stroke="#444" stroke-width="1.5" marker-end="url(#ar16)"/>
+  <path d="M320,150 C380,165 420,170 440,182" stroke="#444" stroke-width="1.5" marker-end="url(#ar16)"/>
+  <text x="160" y="176" text-anchor="middle" font-size="11" font-weight="700" fill="#2f3f8f">MAPK</text>
+  <rect x="120" y="184" width="160" height="34" rx="7" fill="#eef2fb" stroke="#2f3f8f"/>
+  <text x="200" y="206" text-anchor="middle" font-size="11.5" fill="#2f3f8f">RAF（BRAF）</text>
+  <rect x="120" y="226" width="160" height="34" rx="7" fill="#eef2fb" stroke="#2f3f8f"/>
+  <text x="200" y="248" text-anchor="middle" font-size="11.5" fill="#2f3f8f">MEK → ERK</text>
+  <path d="M200,218 L200,226" stroke="#444" stroke-width="1.4" marker-end="url(#ar16)"/>
+  <text x="480" y="176" text-anchor="middle" font-size="11" font-weight="700" fill="#2f3f8f">PI3K</text>
+  <rect x="360" y="184" width="160" height="34" rx="7" fill="#eef2fb" stroke="#2f3f8f"/>
+  <text x="440" y="206" text-anchor="middle" font-size="11.5" fill="#2f3f8f">PI3K → AKT</text>
+  <rect x="360" y="226" width="160" height="34" rx="7" fill="#eef2fb" stroke="#2f3f8f"/>
+  <text x="440" y="248" text-anchor="middle" font-size="11.5" fill="#2f3f8f">mTOR</text>
+  <path d="M440,218 L440,226" stroke="#444" stroke-width="1.4" marker-end="url(#ar16)"/>
+  <rect x="210" y="290" width="220" height="44" rx="10" fill="#e9f6ee" stroke="#2e7d4f" stroke-width="1.4"/>
+  <text x="320" y="312" text-anchor="middle" font-size="12" font-weight="700" fill="#1f5d39">増殖・生存（両経路が合流）</text>
+  <text x="320" y="328" text-anchor="middle" font-size="9.5" fill="#3a6b4d">だからKRASの影響は広い</text>
+  <path d="M200,260 C200,285 280,290 300,292" stroke="#2e7d4f" stroke-width="1.4" marker-end="url(#ar16)"/>
+  <path d="M440,260 C440,285 360,290 340,292" stroke="#2e7d4f" stroke-width="1.4" marker-end="url(#ar16)"/>
+</svg>
+<div class="caption">独自作図。KRASは1か所で2本の幹線を踏む分岐点。外部の詳細図は KEGG（hsa04010 / hsa04151）参照。</div>
+</div>
+
+<h2>④ 対応する薬・エビデンス ── G12C だけ薬が出た、ただし課題も</h2>
+<p>
+長く「狙えない」代表だったが、<strong>KRAS G12C という特定の変異</strong>に対しては、変異がオフ状態のときに生じる小さなポケットに結合する阻害薬が登場した（<strong>sotorasib、adagrasib</strong>）。これらは<strong>非小細胞肺がんの KRAS G12C</strong> で承認されている。ただし重要な注意が2つ。<strong>同じ G12C でも大腸がんでは効きにくい</strong>こと（下流や並行経路の補償のため）、そして<strong>耐性を獲得しやすい</strong>こと。また G12C 以外（G12D など）はまだ開発段階。「変異の種類（どの codon か）で意味づけが全く変わる」典型例で、Day 16 のエビデンスレベルの考え方が強く効く。
+</p>
+
+<div class="note">
+<strong>レポート読解での意味づけ</strong><br>
+KRAS と見たら、まず<strong>「どの変異か（G12C か否か）」「どのがん種か」</strong>を確認する。G12C＋肺がんなら阻害薬が候補、同じ G12C でも大腸がんなら効果は限定的、G12D など他の型なら治験対象になりうる。「KRAS陽性」だけでは治療は決まらない、というのが核心。
+</div>
+<nav class="daynav"><a class="back" href="day-19-pten.html"><span class="dir">← 前へ</span><span class="sub">Day 19・PTEN — PI3K経路のブレーキ</span></a><a class="next" href="day-21-braf.html"><span class="dir">次へ →</span><span class="sub">Day 21・BRAF — V600Eと阻害薬の組み合わせ</span></a></nav>
+<footer class="site">がんゲノム学習ノート — Day 20</footer>
+</body>
+</html>
