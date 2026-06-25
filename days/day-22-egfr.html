@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EGFR — 受容体そのものが標的 | がんゲノム学習ノート</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="daypage">
+<div class="topbar">
+<header class="site"><a class="home" href="../index.html">← 目次にもどる</a></header>
+<div class="dayhead">
+<h1>EGFR — 受容体そのものが標的</h1>
+<p class="eyebrow">Day 22</p>
+</div>
+</div>
+<p class="tags"><span class="tag gas">系統：アクセル系（がん遺伝子・RTK）</span> <span class="tag hall">主に効く Hallmark：増殖シグナルの維持</span></p>
+<div class="pos">
+<strong>全体マップの中での位置づけ</strong><br>
+Day 5 の図の最上流「受容体 RTK」そのもの。これまでの KRAS・BRAF が経路の途中だったのに対し、EGFR は<strong>入り口の受容体が標的</strong>。肺がん領域で分子標的治療がもっとも成功した代表例で、「受容体を直接止める」発想の典型。Day 20 で学んだ「下流（KRAS）が固定なら上流を止めても無駄」とセットで理解すると深まる。
+</div>
+
+<h2>① 正常時の役割 ── 増殖因子を受け取る入り口</h2>
+<p>
+EGFR は細胞膜にある受容体（RTK）。外から増殖因子（リガンド）を受け取ると二量体化してオンになり、下流の MAPK・PI3K 両経路へ信号を流す（Day 2 の受容体、Day 5 の最上流）。正常ではリガンドが来たときだけオンになる。
+</p>
+
+<h2>② がんでの壊れ方 ── 活性化型/エクソン変異でリガンド無しでもオン</h2>
+<p>
+変異タイプは<strong>活性化型</strong>。エクソン19欠失（exon 19 del）やエクソン21の L858R などが代表で、<strong>リガンドが来ていなくても受容体が勝手にオン</strong>になる。とくに<strong>非小細胞肺がん（腺がん）</strong>で頻出し、東アジア・非喫煙者・女性で比率が高いことが知られる。
+</p>
+
+<h2>③ 乗っている経路 ── 最上流から両経路へ</h2>
+<p>
+EGFR は Day 5 の図の入り口。<strong>EGFR →（RAS 経由で）MAPK / PI3K → 増殖</strong>。上流なので、止めれば下流全体の信号を断てる——ただし<strong>下流（KRAS など）に別の ON 固定があると、上流の EGFR を止めても無駄</strong>（Day 20 で確認した原則）。だから EGFR 治療の前に下流の状態を見るのが定石。
+</p>
+
+<h2>④ 対応する薬・エビデンス ── EGFR-TKIと耐性の世代交代</h2>
+<p>
+EGFR の活性化変異には <strong>EGFR-TKI（チロシンキナーゼ阻害薬）</strong>がよく効く。世代があり、現在の標準は第3世代の <strong>osimertinib</strong>。特徴的なのは<strong>耐性の物語</strong>で、TKI を使い続けると <strong>T790M</strong> のような耐性変異が出て効かなくなり、次世代薬へ切り替える、という展開をたどる。さらに耐性機序として、<strong>下流や並行経路（BRAF V600E・MET 増幅・HER2 など）の活性化</strong>が出ることもあり、ここで Day 20–21・26–27 の遺伝子とつながる。「効く→耐性→次の手」という時間軸が、レポートを継時的に読むときの典型パターン。
+</p>
+
+<div class="note">
+<strong>レポート読解での意味づけ</strong><br>
+EGFR 活性化変異（exon19del / L858R）は<strong>肺がんで強く狙える</strong>代表。一方で<strong>耐性変異（T790M 等）や、耐性をもたらす別遺伝子</strong>が併記されることがあり、それが次の治療選択を決める。EGFR は「最初に効く標的」であると同時に「耐性の起点」でもある、と二面で捉える。
+</div>
+<nav class="daynav"><a class="back" href="day-21-braf.html"><span class="dir">← 前へ</span><span class="sub">Day 21・BRAF — V600Eと阻害薬の組み合わせ</span></a><a class="next" href="day-23-pik3ca.html"><span class="dir">次へ →</span><span class="sub">Day 23・PIK3CA — PI3K経路のアクセル</span></a></nav>
+<footer class="site">がんゲノム学習ノート — Day 22</footer>
+</body>
+</html>

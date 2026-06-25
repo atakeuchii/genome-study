@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hallmark｜増殖シグナルの維持 | がんゲノム学習ノート</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="daypage">
+<div class="topbar">
+<header class="site"><a class="home" href="../index.html">← 目次にもどる</a></header>
+<div class="dayhead">
+<h1>Hallmark｜増殖シグナルの維持</h1>
+<p class="eyebrow">Day 5</p>
+</div>
+</div>
+<p class="tags"><span class="tag hall">Hallmark</span> <span class="tag gas">アクセル：MAPK・PI3K</span></p>
+
+<div class="pos">
+<strong>全体マップの中での位置づけ</strong><br>
+Hallmark各論の初日。<strong>アクセル側</strong>を担う。Day 2 の配線図と Day 3 の「アクセル＝活性化型」が、ここで具体的な経路名（MAPK・PI3K）と結びつく。対になる<strong>ブレーキ側（増殖抑制の回避）は次の Day 6</strong>。フェーズ2の主力遺伝子が最も密集する領域。
+</div>
+
+<h2>① 自前でアクセルを踏み続ける ── MAPK と PI3K</h2>
+<p>
+正常細胞は増殖因子が来たときだけ増える。がん細胞は<strong>自前でアクセルを踏み続ける</strong>。代表経路が2本：
+</p>
+<ul>
+  <li><strong>MAPK/ERK経路</strong>（RTK→RAS→RAF→MEK→ERK）：増殖の号令を核へ運ぶ主幹線。KRAS（Day 20）・BRAF（Day 21）・EGFR（Day 22）が乗る。</li>
+  <li><strong>PI3K/AKT/mTOR経路</strong>：生存・代謝・増殖の中枢。PIK3CA（Day 23）・AKT/mTOR（Day 24）が乗り、ブレーキ役の PTEN（Day 19）が外れると暴走する。</li>
+</ul>
+<p>
+重要なのは、この2本が<strong>独立した別配線ではなく、根元でつながった枝分かれ</strong>だという点。下の図のとおり、両方とも<strong>受容体（RTK）を共通の起点</strong>に持ち、<strong>RAS も両経路を踏む分岐ノード</strong>。だから RTK（EGFR など）や RAS（KRAS）の1か所の変異が、両幹線を同時に踏み込む。
+</p>
+
+<div class="fig">
+<svg viewBox="0 0 760 620" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#444"/>
+    </marker>
+    <marker id="inh" markerWidth="12" markerHeight="12" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 M2,0 L2,6" stroke="#c0392b" stroke-width="1.6"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="28" text-anchor="middle" font-size="17" font-weight="700" fill="#222">増殖の二大幹線（MAPK・PI3K）とブレーキ</text>
+  <text x="380" y="49" text-anchor="middle" font-size="12" fill="#777">受容体(RTK)を起点に2本へ分岐 → 増殖。Rb・p53 がそれを止めるブレーキ</text>
+
+  <!-- ligand -->
+  <rect x="305" y="62" width="150" height="32" rx="16" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.3"/>
+  <text x="380" y="83" text-anchor="middle" font-size="12" fill="#2f3f8f">増殖因子（リガンド）</text>
+
+  <!-- membrane -->
+  <rect x="40" y="110" width="680" height="20" fill="#f3ede2"/>
+  <text x="52" y="124" font-size="10.5" fill="#b29a5f">細胞膜</text>
+
+  <!-- RTK -->
+  <rect x="300" y="100" width="160" height="42" rx="6" fill="#fff4d6" stroke="#caa23a" stroke-width="1.8"/>
+  <text x="380" y="118" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7a5c10">受容体 RTK</text>
+  <text x="380" y="133" text-anchor="middle" font-size="10" fill="#9a7d2e">例：EGFR / HER2 / MET</text>
+  <path d="M380,94 L380,100" fill="none" stroke="#444" stroke-width="1.4" marker-end="url(#ar)"/>
+
+  <!-- branch from RTK -->
+  <path d="M380,142 L380,158" fill="none" stroke="#444" stroke-width="1.6"/>
+  <path d="M380,158 C300,162 240,166 212,176" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M380,158 C460,162 520,166 548,176" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- LEFT ARM: MAPK -->
+  <text x="212" y="172" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f3f8f">MAPK/ERK 経路</text>
+  <g>
+    <rect x="132" y="180" width="160" height="38" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.3"/>
+    <text x="212" y="204" text-anchor="middle" font-size="12" fill="#2f3f8f">RAS（KRAS / NRAS）</text>
+    <rect x="132" y="236" width="160" height="38" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.3"/>
+    <text x="212" y="260" text-anchor="middle" font-size="12" fill="#2f3f8f">RAF（BRAF）</text>
+    <rect x="132" y="292" width="160" height="38" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.3"/>
+    <text x="212" y="316" text-anchor="middle" font-size="12" fill="#2f3f8f">MEK</text>
+    <rect x="132" y="348" width="160" height="38" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.3"/>
+    <text x="212" y="372" text-anchor="middle" font-size="12" fill="#2f3f8f">ERK</text>
+  </g>
+  <path d="M212,218 L212,236" fill="none" stroke="#444" stroke-width="1.5" marker-end="url(#ar)"/>
+  <path d="M212,274 L212,292" fill="none" stroke="#444" stroke-width="1.5" marker-end="url(#ar)"/>
+  <path d="M212,330 L212,348" fill="none" stroke="#444" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- RIGHT ARM: PI3K -->
+  <text x="548" y="172" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2f3f8f">PI3K/AKT/mTOR 経路</text>
+  <g>
+    <rect x="468" y="180" width="160" height="38" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.3"/>
+    <text x="548" y="204" text-anchor="middle" font-size="12" fill="#2f3f8f">PI3K（PIK3CA）</text>
+    <rect x="468" y="236" width="160" height="38" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.3"/>
+    <text x="548" y="260" text-anchor="middle" font-size="12" fill="#2f3f8f">AKT</text>
+    <rect x="468" y="292" width="160" height="38" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.3"/>
+    <text x="548" y="316" text-anchor="middle" font-size="12" fill="#2f3f8f">mTOR</text>
+  </g>
+  <path d="M548,218 L548,236" fill="none" stroke="#444" stroke-width="1.5" marker-end="url(#ar)"/>
+  <path d="M548,274 L548,292" fill="none" stroke="#444" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- PTEN brake on PI3K->AKT -->
+  <rect x="648" y="218" width="92" height="36" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="694" y="240" text-anchor="middle" font-size="12" font-weight="700" fill="#a5281b">PTEN</text>
+  <path d="M648,232 L556,229" fill="none" stroke="#c0392b" stroke-width="1.6" marker-end="url(#inh)"/>
+  <text x="694" y="270" text-anchor="middle" font-size="9.5" fill="#a5281b">PI3Kを戻すブレーキ</text>
+
+  <!-- RAS feeds PI3K (branch node) -->
+  <path d="M292,196 C360,196 400,196 468,196" fill="none" stroke="#7a5ca0" stroke-width="1.4" stroke-dasharray="5 3" marker-end="url(#ar)"/>
+  <text x="380" y="190" text-anchor="middle" font-size="10" fill="#7a5ca0">RASは両経路を踏む</text>
+
+  <!-- converge to proliferation -->
+  <rect x="250" y="452" width="260" height="46" rx="10" fill="#e9f6ee" stroke="#2e7d4f" stroke-width="1.5"/>
+  <text x="380" y="472" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1f5d39">増殖（細胞周期を回す）</text>
+  <text x="380" y="488" text-anchor="middle" font-size="10" fill="#3a6b4d">＝ Day 1 の G1/S 関所を越える</text>
+  <path d="M212,386 C212,420 300,440 320,452" fill="none" stroke="#2e7d4f" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M548,330 C548,400 460,440 440,452" fill="none" stroke="#2e7d4f" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- brakes Rb / p53 -->
+  <rect x="40" y="456" width="150" height="40" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="115" y="480" text-anchor="middle" font-size="12" font-weight="700" fill="#a5281b">Rb（RB1）</text>
+  <rect x="570" y="456" width="150" height="40" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="645" y="480" text-anchor="middle" font-size="12" font-weight="700" fill="#a5281b">p53（TP53）</text>
+  <path d="M190,476 L248,476" fill="none" stroke="#c0392b" stroke-width="1.7" marker-end="url(#inh)"/>
+  <path d="M570,476 L512,476" fill="none" stroke="#c0392b" stroke-width="1.7" marker-end="url(#inh)"/>
+
+  <!-- bottom caption -->
+  <rect x="150" y="540" width="460" height="58" rx="8" fill="#f7f7f7" stroke="#bbb" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="380" y="562" text-anchor="middle" font-size="11.5" fill="#333"><tspan font-weight="700" fill="#2f3f8f">アクセル</tspan>（青）＝活性化型で踏みっぱなし／<tspan font-weight="700" fill="#a5281b">ブレーキ</tspan>（赤）＝機能喪失で外れる</text>
+  <text x="380" y="582" text-anchor="middle" font-size="11.5" fill="#333">がん細胞は「2本のアクセルを踏み込み」かつ「2つのブレーキを壊す」＝二重に増殖を確保</text>
+</svg>
+<div class="caption">独自作図。青＝アクセル（活性化型で踏みっぱなし）、赤＝ブレーキ（外れる側＝Day 6 の主役）。外部の詳細図は KEGG（hsa04010 / hsa04151）参照。</div>
+</div>
+
+<h2>② アクセル系は「引き算」で狙いやすい</h2>
+<p>
+Day 3 の対比がここで効く。アクセル系は活性化型＝<strong>「ON に固定されたスイッチを薬で OFF に戻す」＝引き算</strong>で、阻害薬が得意。だから狙いやすい。薬（小分子）は「あるタンパクにくっついて働きを邪魔する」のが得意だから、止めるべき場所（踏まれっぱなしのボタン）がはっきりしているアクセル系は設計しやすい。フェーズ2で KRAS 以降のアクセル系の回が「どの阻害薬で止めるか」中心になるのはこのため（ブレーキ系の「足し算」の難しさは Day 6）。
+</p>
+
+<h2>③ 下流が固定なら、上流を止めても無駄</h2>
+<p>
+配線が直列なので、<strong>下流のノードが ON 固定だと、上流をいくら止めても信号は止まらない</strong>。受容体（EGFR）を薬で止めても、その下流の KRAS が活性化型で ON 固定なら効かない——これは実臨床の重要原則で、大腸がんで抗 EGFR 抗体を使う前に KRAS 変異を調べるのはこのため（Day 20・22 で再登場）。「ボタンは下流ほど優先される」と覚える。
+</p>
+
+<div class="note">
+<strong>この日の要点（後ろへのつながり）</strong><br>
+・増殖シグナルの維持＝<strong>自前でアクセル（MAPK・PI3K）を踏み続ける</strong>。両経路は RTK・RAS を起点に枝分かれ。<br>
+・アクセル系は<strong>引き算（止める）で狙いやすい</strong>。<br>
+・<strong>下流が固定なら上流を止めても無駄</strong>（EGFR vs KRAS）。<br>
+・次の Day 6 は、対になるブレーキ側「増殖抑制の回避」。
+</div>
+
+<nav class="daynav"><a class="back" href="day-4-hallmarks-overview.html"><span class="dir">← 前へ</span><span class="sub">Day 4・Hallmarks of Cancer 総論</span></a><a class="next" href="day-6-hallmark-evading-suppressors.html"><span class="dir">次へ →</span><span class="sub">Day 6・Hallmark｜増殖抑制の回避</span></a></nav>
+<footer class="site">がんゲノム学習ノート — Day 5</footer>
+</body>
+</html>
