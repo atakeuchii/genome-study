@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PI3K/AKT/mTOR経路 | がんゲノム学習ノート</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="daypage">
+<div class="topbar">
+<header class="site"><a class="home" href="../index.html">← 目次にもどる</a></header>
+<div class="dayhead">
+<h1>PI3K/AKT/mTOR経路</h1>
+<p class="eyebrow">Day 18</p>
+</div>
+</div>
+<p class="tags"><span class="tag gas">生存・代謝・増殖の中枢</span> <span class="tag hall">増殖シグナルの維持（Day 5）</span></p>
+
+<div class="note" style="margin-bottom:18px">
+<strong>この回の使い方</strong><br>
+JCGAの経路図（<a href="https://www.jcga-scc.jp/ja/gene/BRAF" target="_blank">例：BRAFページの「シグナル伝達経路」</a>）を別タブで開きながら読む。
+各ノードを図の上で探して「ここの話だ」と確認するのが目標。
+</div>
+
+<div class="pos">
+<strong>この経路の位置づけ</strong><br>
+MAPKと並ぶもう一本の主幹線。<strong>図の中央部</strong>に位置し、RTK/RASから枝分かれして生存・代謝・タンパク合成・増殖をまとめて制御する。MAPKが「増殖の号令」に特化しているのに対し、PI3Kは<strong>「生き続けながら大きくなる」総合司令</strong>。Day 5 でも触れた「二大幹線が共通の起点（RTK/RAS）から枝分かれする」構造がここで明確になる。
+</div>
+
+<h2>① 経路の全体像（上流→下流）</h2>
+<p>
+<strong>RTK/RAS → PI3K → PIP3 → PDK1 → AKT → mTOR</strong>、という流れ。MAPKカスケードが「キナーゼが次のキナーゼをリン酸化する」純粋なリレーだったのに対し、PI3K経路は<strong>脂質（PIP3）を中間メッセンジャーとして使う</strong>のが特徴。PIP3という「合言葉の旗」をAKTが認識してオンになる。
+</p>
+
+<h3>PI3K（PIK3CA）</h3>
+<p>
+RTKやRASから活性化されると、細胞膜の脂質<strong>PIP2 → PIP3</strong>に変換する酵素。このPIP3が下流のAKTを招集するシグナルになる。がんでは<strong>PIK3CA</strong>の活性化型変異でPI3Kが過剰になりPIP3が溜まり続ける。
+</p>
+
+<h3>PTEN（ブレーキ）</h3>
+<p>
+PI3Kとまったく逆の反応（<strong>PIP3 → PIP2</strong>）を担う、この経路の専用ブレーキ。PTENが正常に働けばPIP3がすぐ除去されAKTが止まる。<strong>PTENの機能喪失</strong>＝ブレーキが外れ、PI3Kが少し踏んでもAKTが過剰に活性化し続ける。
+</p>
+
+<h3>AKT</h3>
+<p>
+PIP3が出ているときPDK1にリン酸化されてオンになる「実行部隊の司令官」。AKTがオンになると生存（アポトーシス抑制）・増殖・代謝の多数の下流に号令を出す。<strong>BAD（アポトーシス促進係）をリン酸化して不活化</strong>し、細胞を死なせない仕組みも持つ（Day 7 のBCL-2系と接続）。
+</p>
+
+<h3>mTOR</h3>
+<p>
+AKTの下流にある「成長の司令塔」。栄養・エネルギーが揃っているときにタンパク質合成・細胞成長を促進する。がんではAKT→mTORが常時オンになり、細胞が際限なく大きくなり続ける。
+</p>
+
+<p>
+青枠＝正常時の動き、赤枠＝がんでの変異・壊れ方。PTENだけは「ブレーキ役」なので赤枠で「機能喪失」として示す。
+</p>
+<div class="fig">
+<svg viewBox="0 0 720 580" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar18" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,1 L6,4 L0,7 Z" fill="#444"/>
+    </marker>
+    <marker id="inh18" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8" stroke="#c0392b" stroke-width="2"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#222">PI3K/AKT/mTOR 経路：各ノードの正常動作とがんでの壊れ方</text>
+  <text x="360" y="44" text-anchor="middle" font-size="12" fill="#555">青枠＝正常時の動き　赤枠＝がんでの変異・壊れ方</text>
+
+  <!-- 凡例 -->
+  <rect x="530" y="56" width="14" height="14" rx="3" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="550" y="68" font-size="11" fill="#333">正常時の動き</text>
+  <rect x="530" y="78" width="14" height="14" rx="3" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="550" y="90" font-size="11" fill="#333">がんでの変異</text>
+
+  <!-- ① RTK/RAS（上流）-->
+  <text x="20" y="78" font-size="11" font-weight="700" fill="#888">① 上流</text>
+  <rect x="80" y="60" width="200" height="40" rx="8" fill="#fff4d6" stroke="#caa23a" stroke-width="1.4"/>
+  <text x="180" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#7a5c10">RTK / RAS（Day 17 と共通の起点）</text>
+  <text x="180" y="93" text-anchor="middle" font-size="10.5" fill="#9a7d2e">増殖因子→受容体→RAS→PI3Kへ信号</text>
+
+  <!-- 矢印 上流→PI3K -->
+  <path d="M180,100 L180,124" stroke="#444" stroke-width="1.5" marker-end="url(#ar18)"/>
+  <text x="190" y="116" font-size="10" fill="#666">RASまたはRTKから直接活性化</text>
+
+  <!-- ② PI3K + PTEN -->
+  <text x="20" y="150" font-size="11" font-weight="700" fill="#888">② PI3K</text>
+  <rect x="80" y="130" width="200" height="50" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="180" y="152" text-anchor="middle" font-size="12" font-weight="700" fill="#2f3f8f">PI3K（PIK3CA）</text>
+  <text x="180" y="170" text-anchor="middle" font-size="10.5" fill="#444">PIP2 → PIP3 に変換してAKTを呼ぶ</text>
+
+  <rect x="80" y="188" width="200" height="44" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="180" y="207" text-anchor="middle" font-size="11" font-weight="700" fill="#a5281b">がんでの変異：PI3Kが過剰活性化</text>
+  <text x="180" y="224" text-anchor="middle" font-size="10.5" fill="#a5281b">PIK3CA E545K・H1047R など</text>
+
+  <!-- PTEN（ブレーキ）-->
+  <rect x="360" y="140" width="180" height="50" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="450" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#a5281b">PTEN（ブレーキ）</text>
+  <text x="450" y="178" text-anchor="middle" font-size="10.5" fill="#a5281b">PIP3 → PIP2 に戻す（PI3Kの逆）</text>
+  <line x1="360" y1="165" x2="284" y2="155" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="4 2"/>
+  <text x="305" y="148" font-size="10" fill="#c0392b">⊣ 制御</text>
+  <rect x="360" y="198" width="180" height="38" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="5 2"/>
+  <text x="450" y="215" text-anchor="middle" font-size="11" font-weight="700" fill="#a5281b">がん：PTEN機能喪失</text>
+  <text x="450" y="230" text-anchor="middle" font-size="10.5" fill="#a5281b">PIP3が溜まりAKTが鳴り続ける</text>
+
+  <!-- 共通結果の注記 -->
+  <rect x="80" y="242" width="460" height="28" rx="6" fill="#fcf8ec" stroke="#e6d49a"/>
+  <text x="310" y="261" text-anchor="middle" font-size="11" fill="#7a5c10">PIK3CA変異（アクセル↑）とPTEN喪失（ブレーキ↓）は逆向きに壊れるが結果は同じ：PIP3過剰→AKT過活性化</text>
+
+  <!-- 矢印 PI3K→PDK1→AKT -->
+  <path d="M180,286 L180,308" stroke="#444" stroke-width="1.5" marker-end="url(#ar18)"/>
+  <text x="190" y="302" font-size="10" fill="#666">PIP3が増えると PDK1がAKTをリン酸化</text>
+
+  <!-- ③ AKT -->
+  <text x="20" y="332" font-size="11" font-weight="700" fill="#888">③ AKT</text>
+  <rect x="80" y="314" width="200" height="50" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="180" y="336" text-anchor="middle" font-size="12" font-weight="700" fill="#2f3f8f">AKT（実行司令官）</text>
+  <text x="180" y="354" text-anchor="middle" font-size="10.5" fill="#444">生存・増殖・代謝の号令を多方面に出す</text>
+
+  <rect x="80" y="372" width="200" height="44" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="180" y="391" text-anchor="middle" font-size="11" font-weight="700" fill="#a5281b">がんでの変異：直接活性化（まれ）</text>
+  <text x="180" y="408" text-anchor="middle" font-size="10.5" fill="#a5281b">AKT1 E17K など / 多くは上流の異常で過活性化</text>
+
+  <!-- AKT→BAD（アポトーシス抑制）-->
+  <rect x="360" y="324" width="180" height="44" rx="8" fill="#e9f6ee" stroke="#2e7d4f" stroke-width="1.2"/>
+  <text x="450" y="344" text-anchor="middle" font-size="11" font-weight="700" fill="#1f5d39">BADをリン酸化して不活化</text>
+  <text x="450" y="360" text-anchor="middle" font-size="10.5" fill="#2e7d4f">→ BCL-2系のアポトーシス抑制へ（Day 20）</text>
+  <line x1="280" y1="340" x2="360" y2="340" stroke="#2e7d4f" stroke-width="1.2" stroke-dasharray="4 2"/>
+
+  <!-- 矢印 AKT→mTOR -->
+  <path d="M180,416 L180,440" stroke="#444" stroke-width="1.5" marker-end="url(#ar18)"/>
+  <text x="190" y="432" font-size="10" fill="#666">mTORをリン酸化して活性化</text>
+
+  <!-- ④ mTOR -->
+  <text x="20" y="464" font-size="11" font-weight="700" fill="#888">④ mTOR</text>
+  <rect x="80" y="446" width="200" height="50" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="180" y="468" text-anchor="middle" font-size="12" font-weight="700" fill="#2f3f8f">mTOR（成長の司令塔）</text>
+  <text x="180" y="486" text-anchor="middle" font-size="10.5" fill="#444">タンパク合成・細胞成長・代謝を統括</text>
+
+  <!-- 矢印 mTOR→出力 -->
+  <path d="M180,496 L180,520" stroke="#2e7d4f" stroke-width="1.5" marker-end="url(#ar18)"/>
+  <rect x="80" y="522" width="200" height="36" rx="8" fill="#e9f6ee" stroke="#2e7d4f" stroke-width="1.4"/>
+  <text x="180" y="540" text-anchor="middle" font-size="12" font-weight="700" fill="#1f5d39">成長・増殖・生存</text>
+  <text x="180" y="554" text-anchor="middle" font-size="10.5" fill="#2e7d4f">どのノードが壊れても同じ結果</text>
+</svg>
+<div class="caption">独自作図。PIK3CA変異（アクセル増強）とPTEN機能喪失（ブレーキ解除）は逆向きに壊れるが、結果はどちらもPIP3過剰→AKT過活性化で同じ。AKTはDay 20のアポトーシス経路（BCL-2系）にも接続する。</div>
+</div>
+
+<h2>④ 登場する主な遺伝子（位置別）</h2>
+<p style="font-size:13px;color:#666;margin-bottom:6px">この経路の特徴：アクセル側（PIK3CA）とブレーキ側（PTEN）が同じ場所を逆向きに制御する。どちらが壊れても結果は同じ（AKT過活性化）。</p>
+
+<table class="toc">
+  <tr><th>経路上の位置</th><th>遺伝子</th><th>系統</th><th>正常時の役割</th><th>がんでの変異タイプ</th><th>頻度が高いがん種</th><th style="width:60px">補足</th></tr>
+
+  <tr><td rowspan="2" style="font-weight:700;vertical-align:middle;background:#f4f8fa">② PI3K層<br><small>（PIP2→PIP3の制御）</small></td>
+    <td><a href="https://www.jcga-scc.jp/ja/gene/PIK3CA" target="_blank">PIK3CA</a></td>
+    <td>アクセル</td>
+    <td>PIP2→PIP3に変換してAKTを呼ぶ</td>
+    <td>活性化型（E545K・E542K・H1047R）</td>
+    <td>乳・子宮体・大腸・頭頸部</td>
+    <td><a href="../supplement/pik3ca.html">詳細→</a></td></tr>
+  <tr>
+    <td><a href="https://www.jcga-scc.jp/ja/gene/PTEN" target="_blank">PTEN</a></td>
+    <td>ブレーキ</td>
+    <td>PIP3→PIP2に戻す（PI3Kの逆反応）</td>
+    <td>機能喪失（欠失・点変異）</td>
+    <td>子宮体・前立腺・膠芽腫・乳</td>
+    <td><a href="../supplement/pten.html">詳細→</a></td></tr>
+
+  <tr><td rowspan="2" style="font-weight:700;vertical-align:middle;background:#f4f8fa">③ AKT層<br><small>（実行司令官）</small></td>
+    <td>AKT1/2/3</td>
+    <td>アクセル</td>
+    <td>PIP3を認識してPDK1にリン酸化される。多数の下流に号令</td>
+    <td>活性化型（AKT1 E17K など）/ 多くは上流の異常で過活性化</td>
+    <td>乳・大腸・卵巣</td>
+    <td><a href="../supplement/akt-mtor.html">詳細→</a></td></tr>
+  <tr>
+    <td>BAD</td>
+    <td>—</td>
+    <td>アポトーシス促進役（Day 20）</td>
+    <td>AKTにリン酸化されて不活化→アポトーシス抑制</td>
+    <td>（直接変異より経路で機能変化）</td>
+    <td></td></tr>
+
+  <tr><td rowspan="2" style="font-weight:700;vertical-align:middle;background:#f4f8fa">④ mTOR層<br><small>（成長の司令塔）</small></td>
+    <td>mTOR（MTOR）</td>
+    <td>アクセル</td>
+    <td>タンパク合成・細胞成長・代謝を統括</td>
+    <td>活性化型変異（まれ）/ 多くは上流の異常で過活性化</td>
+    <td>腎・子宮体など</td>
+    <td><a href="../supplement/akt-mtor.html">詳細→</a></td></tr>
+  <tr>
+    <td>TSC1/TSC2</td>
+    <td>ブレーキ</td>
+    <td>mTORを抑えるブレーキ複合体（ハマータン症候群関連）</td>
+    <td>機能喪失→mTOR過活性化</td>
+    <td>腎・肺（リンパ脈管筋腫症）</td>
+    <td></td></tr>
+</table>
+
+<div class="note">
+<strong>MAPKとPI3Kの接続点：RAS</strong><br>
+RASは<strong>MAPKとPI3Kの両方を踏む分岐点</strong>（Day 17参照）。だからKRAS変異は2本の幹線を同時に踏み込む。EGFRなどのRTK変異もRASを介して両方に信号を流す。「上流を共有して枝分かれする」構造がこの2経路の核心的な関係。
+</div>
+<nav class="daynav"><a class="back" href="day-17-pathway-mapk.html"><span class="dir">← 前へ</span><span class="sub">Day 17・MAPK/ERK経路</span></a><a class="next" href="day-19-pathway-cell-cycle.html"><span class="dir">次へ →</span><span class="sub">Day 19・細胞周期制御経路</span></a></nav>
+<footer class="site">がんゲノム学習ノート — Day 18</footer>
+</body>
+</html>

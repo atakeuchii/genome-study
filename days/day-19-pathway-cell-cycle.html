@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>細胞周期制御経路 | がんゲノム学習ノート</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="daypage">
+<div class="topbar">
+<header class="site"><a class="home" href="../index.html">← 目次にもどる</a></header>
+<div class="dayhead">
+<h1>細胞周期制御経路</h1>
+<p class="eyebrow">Day 19</p>
+</div>
+</div>
+<p class="tags"><span class="tag brake">ブレーキ系の主戦場</span> <span class="tag hall">増殖抑制の回避（Day 6）</span></p>
+
+<div class="note" style="margin-bottom:18px">
+<strong>この回の使い方</strong><br>
+JCGAの経路図（<a href="https://www.jcga-scc.jp/ja/gene/BRAF" target="_blank">例：BRAFページの「シグナル伝達経路」</a>）を別タブで開きながら読む。
+各ノードを図の上で探して「ここの話だ」と確認するのが目標。
+</div>
+
+<div class="pos">
+<strong>この経路の位置づけ</strong><br>
+Day 17・18のアクセル経路が最終的に「命令を実行する場所」がここ。<strong>図の右上部</strong>に細胞周期のコントロールパネルが集まっており、MAPKとPI3Kからの増殖シグナルを受けとって「G1→S期」を通すかどうかを最終決定する。アクセルとブレーキが直接ぶつかる交差点。
+</div>
+
+<h2>① CDK-Rb-E2F軸：関所の開閉機構</h2>
+<p>
+細胞周期のG1/S関所を通すかどうかは、<strong>CDK（サイクリン依存性キナーゼ）がRbをリン酸化するかどうか</strong>で決まる。
+</p>
+<ul>
+  <li><strong>Rb（RB1）</strong>：E2Fという転写因子をつかまえて増殖遺伝子をオフにしている「門番」。平時はE2Fを抑えてS期への進行を止めている。</li>
+  <li><strong>CDK4/6 + Cyclin D</strong>：MAPKなどのアクセルシグナルを受けてCyclin Dが増加し、CDK4/6と複合体を形成。Rbをリン酸化してE2Fを解放する「鍵を回す役」。</li>
+  <li><strong>E2F</strong>：RbのつかみからはなされるとS期開始に必要な遺伝子群をオンにする転写因子。</li>
+</ul>
+<p>
+流れ：<strong>アクセル → Cyclin D↑ → CDK4/6活性化 → Rb リン酸化 → E2F解放 → S期開始</strong>。
+</p>
+
+<h2>② p53-MDM2軸：独立した非常ブレーキ</h2>
+<p>
+Rb軸とは別に、<strong>p53（TP53）</strong>が独立した非常ブレーキとして機能する。DNA損傷・異常な増殖シグナルを感知するとp53が安定化し、<strong>p21</strong>（CDKインヒビター＝CDKを止める係）の産生を誘導してCDKを抑制する。これにより間接的にRbのリン酸化を防ぎ、G1に細胞を止める。
+</p>
+<p>
+<strong>MDM2</strong>は正常時にp53を分解・抑制する役で、平時のp53量を低く保つ。ストレス時にはMDM2の抑制が外れてp53が立ち上がる。MDM2とp53の綱引きがこの軸の本質。
+</p>
+
+<p>
+青枠＝正常時の動き、赤枠＝がんでの変異・壊れ方。2つの独立したブレーキ軸（Rb軸・p53軸）を並べて示す。
+</p>
+<div class="fig">
+<svg viewBox="0 0 720 560" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar19" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,1 L6,4 L0,7 Z" fill="#444"/>
+    </marker>
+    <marker id="inh19r" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,8" stroke="#c0392b" stroke-width="2"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#222">細胞周期制御：CDK-Rb-E2F軸 と p53-MDM2軸</text>
+  <text x="360" y="44" text-anchor="middle" font-size="12" fill="#555">2つの独立したブレーキ軸。両方が壊れると関所が完全に開きっぱなしになる</text>
+
+  <!-- 凡例 -->
+  <rect x="530" y="56" width="14" height="14" rx="3" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="550" y="68" font-size="11" fill="#333">正常時の動き</text>
+  <rect x="530" y="78" width="14" height="14" rx="3" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="550" y="90" font-size="11" fill="#333">がんでの変異</text>
+
+  <!-- 左列：CDK-Rb-E2F軸 -->
+  <text x="170" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#2f3f8f">【CDK-Rb-E2F軸】</text>
+  <text x="170" y="88" text-anchor="middle" font-size="10.5" fill="#555">増殖の最終関所を直接開閉する</text>
+
+  <!-- アクセル信号 -->
+  <rect x="70" y="100" width="200" height="40" rx="8" fill="#fff4d6" stroke="#caa23a" stroke-width="1.4"/>
+  <text x="170" y="118" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7a5c10">アクセル信号（MAPK/PI3K）</text>
+  <text x="170" y="133" text-anchor="middle" font-size="10.5" fill="#9a7d2e">↓ Cyclin D1の産生を促す</text>
+
+  <path d="M170,140 L170,162" stroke="#444" stroke-width="1.5" marker-end="url(#ar19)"/>
+
+  <!-- Cyclin D + CDK4/6 -->
+  <rect x="70" y="164" width="200" height="50" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="170" y="184" text-anchor="middle" font-size="12" font-weight="700" fill="#2f3f8f">Cyclin D + CDK4/6</text>
+  <text x="170" y="202" text-anchor="middle" font-size="10.5" fill="#444">複合体を形成しRbをリン酸化する</text>
+
+  <!-- CDKN2A（p16）ブレーキ -->
+  <rect x="310" y="172" width="150" height="38" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="385" y="189" text-anchor="middle" font-size="11" font-weight="700" fill="#a5281b">CDKN2A（p16）</text>
+  <text x="385" y="204" text-anchor="middle" font-size="10" fill="#a5281b">CDK4/6を阻害するブレーキ</text>
+  <line x1="310" y1="189" x2="272" y2="189" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="4 2"/>
+  <text x="289" y="183" font-size="9" fill="#c0392b">⊣</text>
+
+  <path d="M170,214 L170,236" stroke="#444" stroke-width="1.5" marker-end="url(#ar19)"/>
+  <text x="190" y="230" font-size="10" fill="#666">Rbをリン酸化して不活化</text>
+
+  <!-- Rb -->
+  <rect x="70" y="238" width="200" height="50" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="170" y="258" text-anchor="middle" font-size="12" font-weight="700" fill="#a5281b">Rb（RB1）</text>
+  <text x="170" y="276" text-anchor="middle" font-size="10.5" fill="#a5281b">E2Fをつかんで増殖遺伝子をオフに保つ門番</text>
+
+  <path d="M170,288 L170,310" stroke="#444" stroke-width="1.5" marker-end="url(#ar19)"/>
+  <text x="190" y="304" font-size="10" fill="#666">Rbがリン酸化→E2Fが解放</text>
+
+  <!-- E2F -->
+  <rect x="70" y="312" width="200" height="40" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="170" y="330" text-anchor="middle" font-size="12" font-weight="700" fill="#2f3f8f">E2F（転写因子）</text>
+  <text x="170" y="347" text-anchor="middle" font-size="10.5" fill="#444">解放されるとS期開始遺伝子をオンにする</text>
+
+  <path d="M170,352 L170,374" stroke="#2e7d4f" stroke-width="1.5" marker-end="url(#ar19)"/>
+  <rect x="70" y="376" width="200" height="34" rx="8" fill="#e9f6ee" stroke="#2e7d4f" stroke-width="1.4"/>
+  <text x="170" y="392" text-anchor="middle" font-size="12" font-weight="700" fill="#1f5d39">S期開始（DNA複製）</text>
+  <text x="170" y="406" text-anchor="middle" font-size="10" fill="#2e7d4f">G1/S関所を通過</text>
+
+  <!-- 右列：p53-MDM2軸 -->
+  <text x="560" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#a5281b">【p53-MDM2軸】</text>
+  <text x="560" y="88" text-anchor="middle" font-size="10.5" fill="#555">DNAの傷・異常増殖を感知する非常ブレーキ</text>
+
+  <!-- ストレス入力 -->
+  <rect x="460" y="100" width="200" height="40" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="560" y="118" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a5281b">DNA損傷・異常増殖シグナル</text>
+  <text x="560" y="133" text-anchor="middle" font-size="10.5" fill="#933">↓ p53を安定化させる</text>
+
+  <path d="M560,140 L560,162" stroke="#c0392b" stroke-width="1.5" marker-end="url(#ar19)"/>
+
+  <!-- p53 -->
+  <rect x="460" y="164" width="200" height="50" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="560" y="184" text-anchor="middle" font-size="12" font-weight="700" fill="#a5281b">p53（TP53）</text>
+  <text x="560" y="202" text-anchor="middle" font-size="10.5" fill="#a5281b">止める・直す・殺すを統括する転写因子</text>
+
+  <!-- MDM2（p53のブレーキ） -->
+  <rect x="310" y="245" width="140" height="38" rx="6" fill="#fcf8ec" stroke="#e6d49a" stroke-width="1.2"/>
+  <text x="380" y="262" text-anchor="middle" font-size="11" font-weight="700" fill="#7a5c10">MDM2</text>
+  <text x="380" y="277" text-anchor="middle" font-size="10" fill="#7a5c10">平時はp53を分解して量を保つ</text>
+  <line x1="450" y1="188" x2="450" y2="264" stroke="#7a5c10" stroke-width="1" stroke-dasharray="3 2"/>
+  <line x1="450" y1="264" x2="452" y2="264" stroke="#7a5c10" stroke-width="1"/>
+
+  <path d="M560,214 L560,238" stroke="#c0392b" stroke-width="1.5" marker-end="url(#ar19)"/>
+
+  <!-- p21 -->
+  <rect x="460" y="240" width="200" height="40" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="560" y="258" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a5281b">p21（CDKN1A）を誘導</text>
+  <text x="560" y="273" text-anchor="middle" font-size="10.5" fill="#a5281b">CDK4/6を阻害→Rbのリン酸化を止める</text>
+
+  <!-- p21→CDK（左列への接続） -->
+  <line x1="460" y1="258" x2="280" y2="188" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="4 2"/>
+  <text x="360" y="218" font-size="9" fill="#c0392b">⊣ CDK抑制</text>
+
+  <path d="M560,280 L560,312" stroke="#c0392b" stroke-width="1.5" marker-end="url(#ar19)"/>
+
+  <!-- アポトーシス・細胞老化 -->
+  <rect x="460" y="314" width="200" height="50" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="560" y="334" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a5281b">アポトーシス・細胞老化の誘導</text>
+  <text x="560" y="352" text-anchor="middle" font-size="10.5" fill="#a5281b">BCL-2系（Day 20）・カスパーゼへ</text>
+
+  <!-- 共通まとめ -->
+  <rect x="70" y="430" width="590" height="36" rx="8" fill="#fcf8ec" stroke="#e6d49a"/>
+  <text x="365" y="448" text-anchor="middle" font-size="11.5" font-weight="700" fill="#7a5c10">RB1喪失→関所が開きっぱなし　TP53喪失→非常ブレーキが効かない　両方喪失→増殖の抑制が完全に失われる</text>
+  <text x="365" y="462" text-anchor="middle" font-size="10.5" fill="#555">CDKN2A喪失はCDKへのブレーキ解除→RB1喪失と類似の効果</text>
+</svg>
+<div class="caption">独自作図。左列がCDK-Rb-E2F軸（関所の開閉）、右列がp53-MDM2軸（非常ブレーキ）。矢印を横断する点線（p21→CDK）が2つの軸の接続点。</div>
+</div>
+
+<h2>③ 登場する主な遺伝子（位置別）</h2>
+<p style="font-size:13px;color:#666;margin-bottom:6px">2つの軸は独立して機能する。一方が壊れても他方が残っていればある程度ブレーキが効く。両方が壊れると増殖の抑制が完全に失われる。</p>
+
+<table class="toc">
+  <tr><th>軸・位置</th><th>遺伝子</th><th>系統</th><th>正常時の役割</th><th>がんでの変異タイプ</th><th>頻度が高いがん種</th><th style="width:60px">補足</th></tr>
+
+  <tr><td rowspan="4" style="font-weight:700;vertical-align:middle;background:#f4f8fa">CDK-Rb-E2F軸<br><small>（関所の開閉）</small></td>
+    <td><a href="https://www.jcga-scc.jp/ja/gene/RB1" target="_blank">RB1</a></td>
+    <td>ブレーキ</td>
+    <td>E2Fをつかんで増殖遺伝子をオフに保つ門番</td>
+    <td>機能喪失（欠失・点変異）</td>
+    <td>網膜芽細胞腫・小細胞肺・膀胱・乳</td>
+    <td><a href="../supplement/rb1.html">詳細→</a></td></tr>
+  <tr>
+    <td>CDK4/6</td>
+    <td>アクセル</td>
+    <td>Cyclin Dと複合体を組んでRbをリン酸化（関所を開ける）</td>
+    <td>増幅・活性化</td>
+    <td>乳・神経膠腫など</td>
+    <td></td></tr>
+  <tr>
+    <td>CCND1（Cyclin D1）</td>
+    <td>アクセル</td>
+    <td>CDK4/6のパートナー。アクセル信号で増加する</td>
+    <td>増幅・過剰発現</td>
+    <td>乳・頭頸部・食道・マントル細胞リンパ腫</td>
+    <td></td></tr>
+  <tr>
+    <td>CDKN2A（p16）</td>
+    <td>ブレーキ</td>
+    <td>CDK4/6を阻害してRbのリン酸化を防ぐ</td>
+    <td>機能喪失（欠失・メチル化）</td>
+    <td>メラノーマ・膵・肺・頭頸部</td>
+    <td><a href="../supplement/cdkn2a.html">詳細→</a></td></tr>
+
+  <tr><td rowspan="3" style="font-weight:700;vertical-align:middle;background:#f4f8fa">p53-MDM2軸<br><small>（非常ブレーキ）</small></td>
+    <td><a href="https://www.jcga-scc.jp/ja/gene/TP53" target="_blank">TP53</a></td>
+    <td>ブレーキ</td>
+    <td>DNA損傷・異常増殖を感知して停止・修復・アポトーシスを統括</td>
+    <td>機能喪失＋優性阻害＋gain-of-function</td>
+    <td>ほぼ全がん種（50〜60%）</td>
+    <td><a href="../supplement/tp53.html">詳細→</a></td></tr>
+  <tr>
+    <td>MDM2</td>
+    <td>—</td>
+    <td>平時はp53を分解して量を低く保つ制御役</td>
+    <td>増幅→p53を過剰に分解（p53が正常でも機能しなくなる）</td>
+    <td>脂肪肉腫・骨軟部腫瘍</td>
+    <td><a href="../supplement/mdm2.html">詳細→</a></td></tr>
+  <tr>
+    <td>CDKN1A（p21）</td>
+    <td>ブレーキ</td>
+    <td>p53により誘導されCDK4/6を阻害（2軸の橋渡し）</td>
+    <td>機能喪失（まれ）</td>
+    <td>（2軸の接続点として機能）</td>
+    <td></td></tr>
+</table>
+
+<div class="note">
+<strong>RB1喪失とCDK4/6阻害薬の関係</strong><br>
+CDK4/6阻害薬は「CDKを止めてRbの押さえを保つ」発想。だが<strong>Rbが既に失われているとこの戦略は無効</strong>（押さえるべきRbが存在しないため）。レポートでRB1機能喪失が確認されたらCDK4/6阻害薬の候補から外す、という読み方になる。
+</div>
+<nav class="daynav"><a class="back" href="day-18-pathway-pi3k.html"><span class="dir">← 前へ</span><span class="sub">Day 18・PI3K/AKT/mTOR経路</span></a><a class="next" href="day-20-pathway-apoptosis.html"><span class="dir">次へ →</span><span class="sub">Day 20・アポトーシス経路（BCL-2系）</span></a></nav>
+<footer class="site">がんゲノム学習ノート — Day 19</footer>
+</body>
+</html>

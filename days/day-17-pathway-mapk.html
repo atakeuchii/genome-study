@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAPK/ERK経路 | がんゲノム学習ノート</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="daypage">
+<div class="topbar">
+<header class="site"><a class="home" href="../index.html">← 目次にもどる</a></header>
+<div class="dayhead">
+<h1>MAPK/ERK経路</h1>
+<p class="eyebrow">Day 17</p>
+</div>
+</div>
+<p class="tags"><span class="tag gas">アクセル系の主幹線</span> <span class="tag hall">増殖シグナルの維持（Day 5）</span></p>
+
+<div class="note" style="margin-bottom:18px">
+<strong>この回の使い方</strong><br>
+JCGAの経路図（<a href="https://www.jcga-scc.jp/ja/gene/BRAF" target="_blank">例：BRAFページの「シグナル伝達経路」</a>）を別タブで開きながら読む。
+各ノードを図の上で探して「ここの話だ」と確認するのが目標。
+</div>
+
+<div class="pos">
+<strong>この経路の位置づけ</strong><br>
+「増殖しろ」という外部の指示を、細胞膜の受容体から核まで伝えるメインハイウェイ。<strong>図の左〜中央上部</strong>に縦に並ぶ一本道（RTK→RAS→RAF→MEK→ERK）がこの経路。フェーズ2で登場する遺伝子の多くがこの道のどこかに乗っている。
+</div>
+
+<h2>① 図を読む前に：この経路の「型」</h2>
+<p>
+Day 2 で学んだシグナル伝達の基本形（<strong>リガンド→受容体→中継→転写因子→遺伝子ON</strong>）をそのまま具体化したのがこの経路。各ノードは「前からリン酸をもらってONになり、次にリン酸を渡す」リレーを繰り返す。<strong>正常時は一時的にオンになり、すぐオフに戻る可逆的なスイッチ</strong>。
+</p>
+
+<h2>② 図の各ノードの役割（上流→下流の順）</h2>
+
+<h3>RTK（受容体型チロシンキナーゼ）</h3>
+<p>
+細胞膜に立つ「受け取り口」。増殖因子（EGF・HGFなど）が外から結合すると、2つのRTKが寄り添って（二量体化）互いをリン酸化し、オンになる。代表が<strong>EGFR・HER2・MET・ALK・RET・ROS1</strong>など。「RTK」は受容体（Receptor）＋チロシンキナーゼ（Tyrosine Kinase）の略で、リン酸を渡す機能を受容体自体が持つ。
+</p>
+
+<h3>SOS → RAS</h3>
+<p>
+RTKがオンになると、アダプタータンパク（GRB2など）を介して<strong>SOS</strong>が呼ばれる。SOSはRASに「GDP→GTP」の交換を促し、<strong>RAS をオンにする</strong>。RASはGTPを結合した状態でオン、加水分解してGDPに戻るとオフ——この切り替えがスイッチの実体。代表遺伝子は<strong><a href="https://www.jcga-scc.jp/ja/gene/KRAS" target="_blank">KRAS</a>・NRAS・HRAS</strong>。<strong>Spry（Sprouty）</strong>はSOSを抑えるネガティブフィードバック係（ブレーキ）。
+</p>
+
+<h3>RAS → RAF（BRAF）</h3>
+<p>
+オンになったRASは<strong>RAF</strong>を膜に呼び寄せてオンにする。RAFはキナーゼで、次のMEKをリン酸化する。RAFファミリーには ARAF・BRAF・CRAF（RAF1）があり、がんで最も重要なのが<strong><a href="https://www.jcga-scc.jp/ja/gene/BRAF" target="_blank">BRAF</a></strong>。注意：BRAFはRASからの信号で動くが、V600E変異ではRAS無しでも単独でオン固定になる（後述）。
+</p>
+
+<h3>MEK → ERK</h3>
+<p>
+RAFにリン酸化されたMEKが、さらに<strong>ERK</strong>をリン酸化してオンにする。ERKは核に移行し、増殖・生存に関わる多数の転写因子をオンにする。この「RAF→MEK→ERK」の直列3段増幅がMAPKカスケードの核心で、上流の小さなシグナルが大きな応答に増幅される。
+</p>
+
+<h2>③ がんでの壊れ方</h2>
+<p>
+各ノードが「正常時はどう動くか」と「がんではどう壊れるか」を、経路の流れ（上から下）に沿って図示する。<strong>青枠＝正常時の動き、赤枠＝がんでの変異・壊れ方</strong>。
+</p>
+
+<div class="fig">
+<svg viewBox="0 0 720 620" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar17" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,1 L6,4 L0,7 Z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#222">MAPK/ERK 経路：各ノードの正常動作とがんでの壊れ方</text>
+  <text x="360" y="44" text-anchor="middle" font-size="12" fill="#555">青枠＝正常時の動き　赤枠＝がんでの変異・壊れ方（どのノードも共通の結果：ERKが鳴り続ける）</text>
+
+  <!-- 凡例 -->
+  <rect x="530" y="56" width="14" height="14" rx="3" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="550" y="68" font-size="11" fill="#333">正常時の動き</text>
+  <rect x="530" y="78" width="14" height="14" rx="3" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="550" y="90" font-size="11" fill="#333">がんでの変異</text>
+
+  <!-- ① RTK -->
+  <text x="20" y="78" font-size="11" font-weight="700" fill="#888">① RTK</text>
+  <rect x="80" y="60" width="200" height="50" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="180" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#2f3f8f">RTK（受容体）</text>
+  <text x="180" y="100" text-anchor="middle" font-size="10.5" fill="#444">増殖因子が結合→二量体化→オン</text>
+
+  <rect x="80" y="118" width="200" height="44" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="180" y="137" text-anchor="middle" font-size="11" font-weight="700" fill="#a5281b">がんでの変異：受容体が勝手にオン</text>
+  <text x="180" y="154" text-anchor="middle" font-size="10.5" fill="#a5281b">EGFR Del19・L858R / HER2増幅 / METエクソン14スキップ</text>
+
+  <!-- 矢印 RTK→RAS -->
+  <path d="M180,162 L180,186" stroke="#444" stroke-width="1.5" marker-end="url(#ar17)"/>
+  <text x="190" y="178" font-size="10" fill="#666">リン酸化→SOS→RASをGTP型に</text>
+
+  <!-- ② RAS -->
+  <text x="20" y="210" font-size="11" font-weight="700" fill="#888">② RAS</text>
+  <rect x="80" y="192" width="200" height="50" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="180" y="214" text-anchor="middle" font-size="12" font-weight="700" fill="#2f3f8f">RAS（分子スイッチ）</text>
+  <text x="180" y="232" text-anchor="middle" font-size="10.5" fill="#444">GTP型でオン→自力でGDPに戻りオフ</text>
+
+  <rect x="80" y="250" width="200" height="44" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="180" y="269" text-anchor="middle" font-size="11" font-weight="700" fill="#a5281b">がんでの変異：GDPに戻れずオン固定</text>
+  <text x="180" y="286" text-anchor="middle" font-size="10.5" fill="#a5281b">KRAS G12C・G12D・G12V / NRAS Q61K など</text>
+
+  <!-- RAS分岐：PI3K（破線パスを使わずテキストのみ） -->
+  <rect x="370" y="200" width="140" height="50" rx="6" fill="#f6f3fb" stroke="#7a5ca0" stroke-width="1.2"/>
+  <text x="440" y="222" text-anchor="middle" font-size="10.5" fill="#553f7a" font-weight="700">PI3K経路へも分岐</text>
+  <text x="440" y="238" text-anchor="middle" font-size="10" fill="#7a5ca0">（RASから→Day 18）</text>
+  <line x1="280" y1="218" x2="370" y2="218" stroke="#7a5ca0" stroke-width="1.2" stroke-dasharray="4 3"/>
+
+  <!-- 矢印 RAS→RAF -->
+  <path d="M180,294 L180,318" stroke="#444" stroke-width="1.5" marker-end="url(#ar17)"/>
+  <text x="190" y="310" font-size="10" fill="#666">RAFを膜に呼び寄せてリン酸化</text>
+
+  <!-- ③ RAF -->
+  <text x="20" y="342" font-size="11" font-weight="700" fill="#888">③ RAF</text>
+  <rect x="80" y="324" width="200" height="50" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="180" y="346" text-anchor="middle" font-size="12" font-weight="700" fill="#2f3f8f">RAF（キナーゼ中継）</text>
+  <text x="180" y="364" text-anchor="middle" font-size="10.5" fill="#444">RASに活性化される→MEKをリン酸化</text>
+
+  <rect x="80" y="382" width="200" height="44" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="180" y="401" text-anchor="middle" font-size="11" font-weight="700" fill="#a5281b">がんでの変異：RAS無しでも単独でオン</text>
+  <text x="180" y="418" text-anchor="middle" font-size="10.5" fill="#a5281b">BRAF V600E（Class I）など</text>
+
+  <!-- 矢印 RAF→MEK -->
+  <path d="M180,426 L180,450" stroke="#444" stroke-width="1.5" marker-end="url(#ar17)"/>
+  <text x="190" y="442" font-size="10" fill="#666">MEKをリン酸化</text>
+
+  <!-- ④ MEK→ERK -->
+  <text x="20" y="474" font-size="11" font-weight="700" fill="#888">④ MEK/ERK</text>
+  <rect x="80" y="456" width="200" height="50" rx="8" fill="#eef2fb" stroke="#2f3f8f" stroke-width="1.4"/>
+  <text x="180" y="476" text-anchor="middle" font-size="12" font-weight="700" fill="#2f3f8f">MEK → ERK</text>
+  <text x="180" y="494" text-anchor="middle" font-size="10.5" fill="#444">ERKが核に入り増殖遺伝子をオン</text>
+
+  <!-- 矢印 ERK→出力 -->
+  <path d="M180,506 L180,530" stroke="#2e7d4f" stroke-width="1.5" marker-end="url(#ar17)"/>
+  <rect x="80" y="532" width="200" height="36" rx="8" fill="#e9f6ee" stroke="#2e7d4f" stroke-width="1.4"/>
+  <text x="180" y="548" text-anchor="middle" font-size="12" font-weight="700" fill="#1f5d39">増殖・生存・分化</text>
+  <text x="180" y="564" text-anchor="middle" font-size="10.5" fill="#2e7d4f">どのノードが固定されても同じ結果</text>
+
+  <!-- 右側：薬の効き方の説明 -->
+  <rect x="500" y="56" width="200" height="0" rx="0" fill="none"/>
+  <text x="600" y="130" text-anchor="middle" font-size="12" font-weight="700" fill="#333">上流を止めても</text>
+  <text x="600" y="148" text-anchor="middle" font-size="12" font-weight="700" fill="#333">下流が固定なら無効</text>
+  <path d="M600,155 L600,195" stroke="#888" stroke-width="1.2" stroke-dasharray="4 2" marker-end="url(#ar17)"/>
+  <rect x="510" y="196" width="180" height="40" rx="6" fill="#f9f9f9" stroke="#bbb"/>
+  <text x="600" y="213" text-anchor="middle" font-size="10.5" fill="#555">例：EGFR阻害薬を使っても</text>
+  <text x="600" y="229" text-anchor="middle" font-size="10.5" fill="#a5281b">KRAS変異があれば無効</text>
+  <path d="M280,218 L510,218" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+</svg>
+<div class="caption">独自作図。上から下へ流れる経路の各ノードについて、青枠が正常時の動き・赤枠ががんでの変異をそれぞれ示す。どのノードが壊れても最終的な結果（ERKが鳴り続ける）は同じ。</div>
+</div>
+
+<h2>④ 登場する主な遺伝子（位置別）</h2>
+
+<p style="font-size:13px;color:#666;margin-bottom:6px">各位置ごとにまとめる。同じ位置のノードが壊れると同じ結果（下流のERK過活性）になる。</p>
+
+<table class="toc">
+  <tr><th>経路上の位置</th><th>遺伝子</th><th>正常時の役割</th><th>がんでの変異タイプ</th><th>頻度が高いがん種</th><th style="width:70px">補足</th></tr>
+
+  <tr><td rowspan="4" style="font-weight:700;vertical-align:middle;background:#f4f8fa">① RTK<br><small>（最上流の受容体）</small></td>
+    <td><a href="https://www.jcga-scc.jp/ja/gene/EGFR" target="_blank">EGFR</a></td>
+    <td>EGFを受け取り二量体化→オン</td>
+    <td>活性化型（Del19・L858R・エクソン20挿入）</td>
+    <td>肺腺がん（特に非喫煙・東アジア）</td>
+    <td><a href="../supplement/egfr.html">詳細→</a></td></tr>
+  <tr>
+    <td>HER2（ERBB2）</td>
+    <td>EGFファミリー受容体、HER3と二量体</td>
+    <td>増幅・活性化変異</td>
+    <td>乳・胃・肺・大腸</td>
+    <td><a href="../supplement/her2.html">詳細→</a></td></tr>
+  <tr>
+    <td>MET</td>
+    <td>HGFを受け取る受容体</td>
+    <td>エクソン14スキッピング・増幅</td>
+    <td>肺・胃・腎</td>
+    <td><a href="../supplement/met.html">詳細→</a></td></tr>
+  <tr>
+    <td>ALK・RET・ROS1・NTRK</td>
+    <td>各種増殖因子の受容体</td>
+    <td>融合遺伝子（他の遺伝子と融合して常時オン）</td>
+    <td>肺・甲状腺・各種</td>
+    <td></td></tr>
+
+  <tr><td rowspan="2" style="font-weight:700;vertical-align:middle;background:#f4f8fa">② RAS<br><small>（両経路の分岐点）</small></td>
+    <td><a href="https://www.jcga-scc.jp/ja/gene/KRAS" target="_blank">KRAS</a></td>
+    <td>GTP型でオン→自力でGDPに戻りオフ</td>
+    <td>活性化型（G12C・G12D・G12V・G13D…）</td>
+    <td>膵（90%）・大腸（45%）・肺腺がん（30%）</td>
+    <td><a href="../supplement/kras-nras.html">詳細→</a></td></tr>
+  <tr>
+    <td>NRAS</td>
+    <td>KRASと同じスイッチ機能</td>
+    <td>活性化型（Q61K・Q61R…）</td>
+    <td>メラノーマ・甲状腺・血液がん</td>
+    <td></td></tr>
+
+  <tr><td rowspan="1" style="font-weight:700;vertical-align:middle;background:#f4f8fa">③ RAF<br><small>（MEKへの中継）</small></td>
+    <td><a href="https://www.jcga-scc.jp/ja/gene/BRAF" target="_blank">BRAF</a></td>
+    <td>RASに活性化されMEKをリン酸化</td>
+    <td>活性化型（V600E中心。ClassによりRAS依存性が異なる）</td>
+    <td>メラノーマ（50%）・甲状腺・大腸・肺</td>
+    <td><a href="../supplement/braf.html">詳細→</a></td></tr>
+
+  <tr><td rowspan="1" style="font-weight:700;vertical-align:middle;background:#f4f8fa">フィードバック<br><small>（ブレーキ係）</small></td>
+    <td>Spry（Sprouty）</td>
+    <td>SOSを抑えてRASの過剰活性を防ぐ</td>
+    <td>機能喪失（がんで失われるとERK活性が上がりやすい）</td>
+    <td>前立腺・乳がんなど</td>
+    <td></td></tr>
+</table>
+
+<div class="note">
+<strong>「下流が固定なら上流を止めても無駄」の実例</strong><br>
+大腸がんでは抗EGFR抗体（上流を止める）を使う前に<strong>KRAS変異を必ず確認</strong>する。KRAS変異（下流ON固定）があると、EGFRを止めても信号は止まらないため。これはこの経路が<strong>直列リレー</strong>であることの直接の帰結。
+</div>
+<nav class="daynav"><a class="back" href="../index.html"><span class="dir">← 目次</span></a><a class="next" href="day-18-pathway-pi3k.html"><span class="dir">次へ →</span><span class="sub">Day 18・PI3K/AKT/mTOR経路</span></a></nav>
+<footer class="site">がんゲノム学習ノート — Day 17</footer>
+</body>
+</html>

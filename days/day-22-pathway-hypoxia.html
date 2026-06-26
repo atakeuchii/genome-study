@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>低酸素応答経路（HIF/VEGF） | がんゲノム学習ノート</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="daypage">
+<div class="topbar">
+<header class="site"><a class="home" href="../index.html">← 目次にもどる</a></header>
+<div class="dayhead">
+<h1>低酸素応答経路（HIF/VEGF）</h1>
+<p class="eyebrow">Day 22</p>
+</div>
+</div>
+<p class="tags"><span class="tag hall">血管新生の誘導（Day 9）</span> <span class="tag gas">HIF1α・VEGF</span></p>
+
+<div class="note" style="margin-bottom:18px">
+<strong>この回の使い方</strong><br>
+JCGAの経路図（<a href="https://www.jcga-scc.jp/ja/gene/BRAF" target="_blank">例：BRAFページの「シグナル伝達経路」</a>）を別タブで開きながら読む。
+各ノードを図の上で探して「ここの話だ」と確認するのが目標。
+</div>
+
+<div class="pos">
+<strong>この経路の位置づけ</strong><br>
+<strong>図の左下部</strong>に配置される低酸素応答経路。他の5つの経路が「細胞自身の増殖・生存」を制御するのに対し、この経路は<strong>「腫瘍が大きくなるために周囲の環境（血管）を作り替える」</strong>能力を担う。Day 9 の血管新生の分子的実体。
+</div>
+
+<h2>① HIF1αという低酸素センサー</h2>
+<p>
+<strong>HIF1α（低酸素誘導因子）</strong>は、細胞が低酸素状態になったことを感知して働き出す転写因子。正常酸素状態ではVHL（フォンヒッペル-リンドウ病遺伝子）がHIF1αをすばやくユビキチン化して分解する——<strong>VHLがHIF1αの「分解スイッチ」を入れ続けてHIF1αを低く保つ</strong>。
+</p>
+<p>
+低酸素になるとVHLによる分解が止まり、HIF1αが安定化・核移行して<strong>血管新生・代謝・細胞生存</strong>に関わる遺伝子群をオンにする。代表的な標的遺伝子が<strong>VEGF（血管内皮増殖因子）</strong>で、これが新しい血管を腫瘍に引き込む信号になる（Day 9）。
+</p>
+
+<h2>② がんでの壊れ方</h2>
+<p>
+最も重要なのが<strong>VHLの機能喪失</strong>（腎細胞がんで高頻度）。VHLが失われるとHIF1αが酸素濃度に関わらず分解されず、<strong>常時「低酸素状態」と細胞が誤認して血管新生のアクセルを踏み続ける</strong>。これがVHL変異腎細胞がんの本質的な異常。
+</p>
+<p>
+もうひとつの接続：<strong>PI3K/AKT/mTOR経路（Day 18）がHIF1αの翻訳を促進する</strong>。mTORはHIF1αタンパクの合成を増やすので、PI3K経路の過活性化は低酸素でなくてもHIF1αを増やすことができる。MAPK経路も同様に接続がある。
+</p>
+
+<table class="toc">
+  <tr><th>遺伝子</th><th>役割</th><th>系統</th><th>がんでの変化</th><th>主ながん種</th></tr>
+  <tr><td>VHL</td><td>HIF1αの分解係（ブレーキ）</td><td>ブレーキ</td><td>機能喪失→HIF1α常時ON</td><td>腎細胞がん</td><td><a href="../supplement/vhl.html">詳細→</a></td></tr>
+  <tr><td>HIF1α</td><td>低酸素センサー・転写因子</td><td>—（下流のアクセル）</td><td>VHL喪失またはmTOR↑で安定化</td><td>多くのがん</td></tr>
+  <tr><td>VEGF/VEGFR</td><td>血管新生シグナル</td><td>アクセル</td><td>過剰発現</td><td>多くのがん</td></tr>
+</table>
+
+<div class="note">
+<strong>パスウェイ間の接続まとめ</strong><br>
+6回のパスウェイ学習を通じて見えてきた接続点：<br>
+・<strong>RAS</strong>：MAPK（Day 17）とPI3K（Day 18）の両方の分岐点<br>
+・<strong>AKT→BAD</strong>：PI3K（Day 18）とアポトーシス（Day 20）をつなぐ<br>
+・<strong>p53→p21→CDK抑制</strong>：TP53（Day 19）と細胞周期（Day 19）の接続<br>
+・<strong>mTOR→HIF1α↑</strong>：PI3K（Day 18）と低酸素（Day 22）の接続<br>
+・<strong>E-カドヘリン/β-catenin</strong>：Wnt（Day 21）とEMT・転移（Day 10）の接続<br>
+これらの接続を意識すると、レポートで複数の遺伝子が並んだとき「どのパスウェイの異常が重なっているか」が読めるようになる。
+</div>
+<nav class="daynav"><a class="back" href="day-21-pathway-wnt.html"><span class="dir">← 前へ</span><span class="sub">Day 21・Wnt/β-catenin経路</span></a><span class="disabled"><span class="dir">次へ →</span><span class="sub">（未作成）</span></span></nav>
+<footer class="site">がんゲノム学習ノート — Day 22</footer>
+</body>
+</html>
