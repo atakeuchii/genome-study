@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wnt/β-catenin経路 | がんゲノム学習ノート</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="daypage">
+<div class="topbar">
+<header class="site"><a class="home" href="../index.html">← 目次にもどる</a></header>
+<div class="dayhead">
+<h1>Wnt/β-catenin経路</h1>
+<p class="eyebrow">Day 21</p>
+</div>
+</div>
+<p class="tags"><span class="tag hall">浸潤と転移（Day 10）</span> <span class="tag gas">アクセル系（転写制御）</span></p>
+
+<div class="note" style="margin-bottom:18px">
+<strong>この回の使い方</strong><br>
+JCGAの経路図（<a href="https://www.jcga-scc.jp/ja/gene/BRAF" target="_blank">例：BRAFページの「シグナル伝達経路」</a>）を別タブで開きながら読む。
+各ノードを図の上で探して「ここの話だ」と確認するのが目標。
+</div>
+
+<div class="pos">
+<strong>この経路の位置づけ</strong><br>
+<strong>図の右端</strong>に配置されるWnt経路は、EMT（上皮間葉転換）と細胞の接着・可動性を制御する。Day 10 で学んだ「E-カドヘリンが低下して細胞が動き出す（転移の入口）」の分子的な実体がここ。増殖というより<strong>細胞の「くっつき方・動き方」を決める経路</strong>。
+</div>
+
+<h2>① E-カドヘリンとβ-catenin：接着と転写の二役</h2>
+<p>
+<strong>β-catenin</strong>はこの経路の中心分子で、2つの場所で働く二役俳優。
+</p>
+<ul>
+  <li><strong>細胞膜での役割（接着）</strong>：E-カドヘリンと結合し、隣の細胞との接着装置の一部として細胞を「固定」する。α-catenin・p120も接着複合体を構成する。</li>
+  <li><strong>核での役割（転写）</strong>：Wntシグナルが入るとβ-cateninが核に移行し、増殖や浸潤に関わる遺伝子をオンにする転写因子として働く。</li>
+</ul>
+<p>
+正常時、Wntシグナルがない状態では<strong>β-cateninは分解複合体（APC・AXIN・GSK3β）に捕まって分解される</strong>。Wntシグナルが来ると分解が止まり、核へ移行する。
+</p>
+
+<h2>② がんでの壊れ方</h2>
+<p>
+最重要なのが<strong>APC（大腸腺腫性ポリポーシス遺伝子）</strong>。APCはβ-cateninを分解複合体に引き込む足場で、ブレーキ役。APCが失われるとβ-cateninが分解されずに核に溜まり、常時「増殖・浸潤」の号令が出続ける。これが大腸がんの最初のステップとして知られるVogelsteinモデルの第一打。
+</p>
+<p>
+一方<strong>E-カドヘリンの低下</strong>は接着側のβ-cateninを解放し、核への移行を促す。これがDay 10で見たEMTの分子的実体で、接着が緩むと同時に転写因子として増殖・浸潤の号令が増える。
+</p>
+
+<table class="toc">
+  <tr><th>遺伝子</th><th>位置</th><th>系統</th><th>がんでの変化</th><th>主ながん種</th></tr>
+  <tr><td>APC</td><td>分解複合体（ブレーキ）</td><td>ブレーキ</td><td>機能喪失</td><td>大腸がん（最頻出）</td><td><a href="../supplement/apc.html">詳細→</a></td></tr>
+  <tr><td>CTNNB1（β-catenin）</td><td>二役（接着・転写）</td><td>アクセル</td><td>活性化型変異（分解耐性）</td><td>肝がん・大腸がん</td></tr>
+  <tr><td>CDH1（E-カドヘリン）</td><td>接着分子</td><td>ブレーキ</td><td>機能喪失→EMT誘導</td><td>乳・胃・大腸</td></tr>
+</table>
+
+<div class="note">
+<strong>MAPKとWntの交点</strong><br>
+大腸がんのVogelsteinモデルでは<strong>APC変異（Wnt）→ KRAS変異（MAPK）→ TP53変異</strong>という順序が古典的。複数のパスウェイが順番に壊れていく多段階発がんの典型例。「どのパスウェイが先に壊れるか」はがん種によって特徴がある。
+</div>
+<nav class="daynav"><a class="back" href="day-20-pathway-apoptosis.html"><span class="dir">← 前へ</span><span class="sub">Day 20・アポトーシス経路（BCL-2系）</span></a><a class="next" href="day-22-pathway-hypoxia.html"><span class="dir">次へ →</span><span class="sub">Day 22・低酸素応答経路（HIF/VEGF）</span></a></nav>
+<footer class="site">がんゲノム学習ノート — Day 21</footer>
+</body>
+</html>
